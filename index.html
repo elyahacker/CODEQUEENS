@@ -9,7 +9,7 @@
     <title>Pharmacy</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <style>
-        /* a{
+         a{
             text-decoration: none;
              color: black;
              font-size: 25px; 
@@ -23,8 +23,7 @@
         .sekil{
             width: 80px;
             height: 80px;
-            background:url(icon.png)
-            center/cover;
+            background:url(icon.png)center/cover;
             border-radius: 50%;
         }
         div{
@@ -44,36 +43,28 @@
             font-family: Arial, Helvetica, sans-serif;
               text-transform:uppercase ;
          }
+        .container{
+            height: 60px;
+            width: 95%;
+            border: 1px solid skyblue;
+            margin-left: 40px;
+            margin-top: 40px;
+            border-radius: 30px;
+
+        }
+        input{
+            font-size: 15px;
+            padding-top: 20px;
+            padding-left: 30px;
+            border: none;
+            cursor: pointer;
+        }
+
         </style>
 </head>
 <body>
     <header>
-    <div class="border">
-        <select name="" id="">
-            <option value="lor"></option>
-            <option value="infeksiyin"></option>
-            <option value="kardioloji"></option>
-        </select>
-        <select name="" id="">
-            <optgroup label="Mercedes">
-                <option value="">karvalol</option>
-                <option value="">hamilelik</option>
-                <option value="">pediatriya</option>
-            </optgroup>
-        </select>
-        <select name="medicine-category" id="medicine-category">
-  <option value="painkillers">Ağrıkəsicilər</option>
-  <option value="antibiotics">Antibiotiklər</option>
-  <option value="vitamins">Vitaminlər</option>
-</select>
-    </div>
-    <select name="city" id="city-select" required>
-  <option value="" selected disabled>-- Şəhər seçin --</option>
-  <option value="baku">Bakı</option>
-  <option value="ganja">Gəncə</option>
-  <option value="sumqayit">Sumqayıt</option>
-</select> 
-<!-- <div>
+<div>
     <div class="sekil"></div>
     <h2 class="logo">YourrPharmacy</h2>
 
@@ -82,8 +73,16 @@
     <a href="#">Kataloqlar</a>
     <a href="#">Məhsullar</a>
     <a href="#">Brendlər</a>
-    <a href="#">Sifariş qaydası</a> -->
+    <a href="#">Sifariş qaydası</a>
 </header>
+    <div class="container">
+        <form class="search" role="search">
+            <input type="search" placeholder="🔍Search">
+            <div class="container2"></div>
+        </form>
+
+    </div>
+
     
 </body>
 </html>
