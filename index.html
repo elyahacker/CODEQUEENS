@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="YourrPharmacy">
-    <meta name="keywords" content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,
+    <meta name="keywords"
+        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,
     onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
     <title>Pharmacy</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <style>
-         a{
+        a {
             text-decoration: none;
-             color: black;
-             font-size: 25px; 
-             padding: 18px;
-             
-        }
-        .logo{
-            text-shadow: 10px 10px 10px;
+            color: black;
+            font-size: 25px;
+            padding: 18px;
+
         }
 
-        .sekil{
+        .logo {
+            text-shadow: 10px 10px 10px;
+            font-size: 30px;
+            font-weight: 100px;
+
+        }
+
+        .sekil {
             width: 80px;
             height: 80px;
-            background:url(icon.png)center/cover;
+            background: url(icon.png)center/cover;
             border-radius: 50%;
         }
-        div{
+
+        div {
             display: inline-block;
-        } */
-         .border{
-            width: 100%;
-            line-height: 100px;
-            border: 1px solid black;
-            background-color: skyblue;
-         }
-         select{
-            border: 2px solid black;
-            color: blueviolet;
-            font-size: 10px;
-            font-weight: 1000;
-            font-family: Arial, Helvetica, sans-serif;
-              text-transform:uppercase ;
-         }
-        .container{
-            height: 60px;
-            width: 95%;
+        }
+
+        .container {
+            height: 40px;
+            width: 20%;
             border: 1px solid skyblue;
-            margin-left: 40px;
-            margin-top: 40px;
-            border-radius: 30px;
+            margin-left: 999px;
+            /* margin-bottom: 0%; */
+            border-radius: 39px;
 
         }
-        input{
+
+        input {
             font-size: 15px;
             padding-top: 20px;
             padding-left: 30px;
@@ -60,29 +55,42 @@
             cursor: pointer;
         }
 
-        </style>
+        .attachment {
+
+            background-size: cover;
+            background-attachment: fixed;
+            height: 500px;
+        }
+
+       .photo{
+            background-image: url(image.png);
+        } 
+    </style>
 </head>
+
 <body>
     <header>
-<div>
-    <div class="sekil"></div>
-    <h2 class="logo">YourrPharmacy</h2>
+        <div>
+            <h2 class="logo">YourrPharmacy</h2>
+            <!-- <div class="sekil"></div> -->
 
-</div>
-    <a href="#">Ana Səhifə</a>
-    <a href="#">Kataloqlar</a>
-    <a href="#">Məhsullar</a>
-    <a href="#">Brendlər</a>
-    <a href="#">Sifariş qaydası</a>
-</header>
-    <div class="container">
-        <form class="search" role="search">
-            <input type="search" placeholder="🔍Search">
-            <div class="container2"></div>
-        </form>
+        </div>
+        <div class="container">
+            <form class="search" role="search">
+                <input type="search" placeholder="🔍Search">
+                <div class="container2"></div>
+            </form>
 
-    </div>
+        </div>
+        <br><br>
+        <a href="#">Ana Səhifə</a>
+        <a href="#">Kataloqlar</a>
+        <a href="#">Məhsullar</a>
+        <a href="#">Brendlər</a>
+        <a href="#">Sifariş qaydası</a>
+    </header>
+    <div class="attachment photo"></div>
 
-    
 </body>
+
 </html>
