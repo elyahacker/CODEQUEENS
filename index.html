@@ -11,18 +11,34 @@
     <title>Pharmacy</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <style>
+        body{
+            margin: 0;
+    background-color: rgb(0,0,0,0.7);
+    background-image: url(sekil1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+    background-blend-mode: darken;
+        }
         a {
             text-decoration: none;
             color: black;
-            font-size: 25px;
+            font-size: 30px;
             padding: 18px;
+            margin-left: 30px;
 
         }
-
+        #logo{
+            display: flex;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
         .logo {
             text-shadow: 10px 10px 10px;
             font-size: 30px;
             font-weight: 100px;
+            margin-top: 20px;
+            margin-left: 10px;
 
         }
 
@@ -59,29 +75,30 @@
 
             background-size: cover;
             background-attachment: fixed;
-            height: 500px;
+            height: 1000px;
+            background: url(sekil3.png)center/cover;
         }
 
-       .photo{
+       /* .photo{
             background-image: url(image.png);
-        } 
+        }  */
     </style>
 </head>
 
 <body>
     <header>
-        <div>
+        <div id="logo">
+            <div class="sekil"></div>
             <h2 class="logo">YourrPharmacy</h2>
-            <!-- <div class="sekil"></div> -->
 
-        </div>
+        <!-- </div>
         <div class="container">
             <form class="search" role="search">
                 <input type="search" placeholder="🔍Search">
                 <div class="container2"></div>
             </form>
 
-        </div>
+        </div> -->
         <br><br>
         <a href="#">Ana Səhifə</a>
         <a href="#">Kataloqlar</a>
