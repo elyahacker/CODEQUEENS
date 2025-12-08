@@ -105,6 +105,7 @@ input {
     border-radius: 15px;
     margin-left: 40px;
     margin-top: 20px;
+    backdrop-filter: blur(20px);
 
 }
 .login-container {
@@ -185,6 +186,7 @@ button {
     text-decoration: underline;
 }
 a{
-    font-size: 25px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+
 }
