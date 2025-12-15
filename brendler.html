@@ -11,6 +11,72 @@
     <title>Pharmacy</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/4cf6d58f03.js" crossorigin="anonymous"></script>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 17vh;
+} */
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    transition: 0.5s ease-in-out;
+}
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: transparent;
+    color: #050108;
+}
+.search-bar i{
+    cursor: pointer;
+    font-size: 25px;
+    color: #5f5863;
+    margin-right: 25px;
+    
+}
+.search-bar:hover{
+    width: 600px;
+}
+.box{
+    height: 100px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+.box:hover{
+    height: 120px;
+    width: 220px;
+}
+.sekil1{
+    background: url(brend/sekil1.png)center/cover;
+}
+.sekil2{
+    background: url(brend/sekil2.png)center/cover;
+}
+    </style>
 </head>
 
 <body>
@@ -27,7 +93,14 @@
             <a href="sifaris qaydasi.html">Sifariş Qaydası</a>
         </nav>
     </header>
+    
 
+    <!-- <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <i class="fa-solid fa-magnifying-glass"></i> -->
+    <div class="box sekil1"></div>
+    <div class="box sekil2"></div>
+</div>
 </body>
 
 </html>
