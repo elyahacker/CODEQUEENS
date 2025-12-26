@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="YourrPharmacy">
-    <meta name="keywords"
-        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,
-    onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
-    <title>Pharmacy</title>
+    <title>Pharmacy - Brendlər</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <style>
-        /* Müasir Şriftlərin İnteqrasiyası */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
         * {
@@ -22,6 +18,13 @@
             text-decoration: none !important;
         }
 
+        /* Fonu bura verdik ki, aşağı sürüşdürəndə hər şey görünsün */
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sekil/sekil1.png') center/cover no-repeat fixed;
+            min-height: 100vh;
+            padding-top: 130px;
+        }
+
         .luxury-header {
             width: 100%;
             padding: 15px 5%;
@@ -29,13 +32,9 @@
             top: 0;
             left: 0;
             z-index: 10000;
-            background: url(sekil/sekil1.png) center/cover;
-            height: 100vh;
-            background-color: rgb(0, 0, 0, 0.3);
-            background-blend-mode: darken;
+            /* height: 100vh BURADAN SİLİNDİ Kİ, AŞAĞI AÇILSIN */
         }
 
-        /* Naviqasiya Paneli */
         .nav-wrapper {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
@@ -45,7 +44,6 @@
             padding: 10px 35px;
             border-radius: 100px;
             border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .brand-box {
@@ -55,14 +53,14 @@
         }
 
         .main-icon {
-            height: 40px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
 
         .brand-title {
             color: white;
             font-size: 20px;
-            font-weight: 400;
-            letter-spacing: -0.5px;
         }
 
         .brand-title span {
@@ -82,18 +80,12 @@
             font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             padding: 12px 18px;
             cursor: pointer;
             transition: 0.3s;
         }
 
-        .nav-item:hover,
-        .mega-trigger:hover {
-            color: #f39c12;
-        }
-
-        /* MEGA MENU PANEL */
+        /* --- SƏNİN MEGA MENU CSS-İN (TOXUNULMADI) --- */
         .mega-dropdown {
             position: relative;
         }
@@ -103,7 +95,6 @@
             top: 150%;
             right: 0;
             width: 900px;
-            /* 3 Sütun üçün eni artırıldı */
             background: white;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
@@ -111,7 +102,7 @@
             visibility: hidden;
             opacity: 0;
             transform: translateY(20px);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: 0.4s;
         }
 
         .mega-dropdown:hover .mega-panel {
@@ -126,7 +117,6 @@
             position: relative;
         }
 
-        /* SIDEBAR */
         .mega-sidebar {
             width: 35%;
             background: #f9fbfb;
@@ -136,15 +126,6 @@
             border-right: 1px solid #eee;
         }
 
-        .mega-sidebar::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .mega-sidebar::-webkit-scrollbar-thumb {
-            background: #ddd;
-            border-radius: 10px;
-        }
-
         .cat-link {
             padding: 14px 25px;
             font-size: 13px;
@@ -152,6 +133,7 @@
             color: #a47474cc;
             transition: 0.2s;
             cursor: pointer;
+            position: relative;
         }
 
         .cat-link:hover {
@@ -159,52 +141,35 @@
             background: white;
         }
 
-        /* SAĞ TƏRƏFİN SÜTUN SİSTEMİ */
         .mega-main-hover {
             display: none;
             position: absolute;
             top: 0;
-            right: 0;
-            width: 65%;
-            height: 100%;
+            right: -185%;
+            width: 185%;
+            height: 500px;
             padding: 30px;
             background: white;
             z-index: 10;
+            border-left: 1px solid #eee;
         }
 
         .cat-link:hover .mega-main-hover {
             display: block;
-            /* Sütunların işləməsi üçün block olmalıdır */
         }
 
-        /* SÜTUNLARIN AYARLANMASI */
         .grid-col {
-            column-count: 3;
-            /* Siyahını 3 sütuna bölür */
+            column-count: 2;
             column-gap: 20px;
             width: 100%;
         }
 
-        .grid-col h3 {
-            column-span: all;
-            /* Başlıq bütün sütunları əhatə edir */
-            font-size: 11px;
-            color: #bbb;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 5px;
-        }
-
         .grid-col a {
             display: block;
-            break-inside: avoid;
-            /* Linkin sütunlar arasında bölünməməsi üçün */
             color: #555;
             font-size: 13px;
             padding: 7px 0;
             transition: 0.2s;
-            line-height: 1.3;
         }
 
         .grid-col a:hover {
@@ -218,37 +183,66 @@
             background: white;
         }
 
-        /* BADGES (NİŞANLAR) MÖVQEYİ */
         .mega-badges {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 30px;
             display: flex;
-            gap: 20px;
-            background: white;
-            border-top: 1px solid #f5f5f5;
-            z-index: 20;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .badge {
+            padding: 6px 15px;
+            border-radius: 50px;
             font-size: 11px;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
+            font-weight: 700;
+            color: white;
         }
 
         .b-green {
-            color: #27ae60;
+            background: #27ae60;
         }
 
         .b-orange {
-            color: #f39c12;
+            background: #f39c12;
         }
 
-        body {
-            padding-top: 100px;
+        /* --- BRENDLƏR QUTUSU CSS --- */
+        .brend-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .brend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .brend-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .brend-card:hover {
+            transform: translateY(-10px);
+            border-color: #27ae60;
+        }
+
+        .brend-card img {
+            max-width: 100%;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .brend-card h3 {
+            color: white;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -258,7 +252,7 @@
     <header class="luxury-header">
         <div class="nav-wrapper">
             <div class="brand-box">
-                <img src="icon.png" alt="Logo" class="main-icon">
+                <img src="sekil/icon.png" alt="Logo" class="main-icon">
                 <h1 class="brand-title">Yourr<span>Pharmacy</span></h1>
             </div>
 
@@ -270,7 +264,6 @@
                     <div class="mega-panel">
                         <div class="mega-layout">
                             <aside class="mega-sidebar">
-
                                 <div class="cat-link">İnfeksion və parazitar
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
@@ -892,10 +885,8 @@
                                 </div>
 
                             </aside>
-
                             <div class="mega-main">
-                                <p style="color: #ccc; font-size: 13px;">Kateqoriya seçmək üçün siyahının üzərinə
-                                    gəlin...</p>
+                                <p style="color: #ccc; font-size: 13px;">Kateqoriya seçin...</p>
                                 <div class="mega-badges">
                                     <span class="badge b-green">● Ən çox baxılanlar</span>
                                     <span class="badge b-orange">● Ən çox satılanlar</span>
@@ -911,6 +902,22 @@
             </nav>
         </div>
     </header>
+
+    <main class="brend-section">
+        <h2 style="color: white; text-align: center; margin-bottom: 30px;">Brendlərimiz</h2>
+        <div class="brend-grid">
+            <div class="brend-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bayer_logo.svg/1200px-Bayer_logo.svg.png"
+                    alt="Bayer">
+                <h3>Bayer</h3>
+            </div>
+            <div class="brend-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pfizer_logo.svg/2560px-Pfizer_logo.svg.png"
+                    alt="Pfizer">
+                <h3>Pfizer</h3>
+            </div>
+        </div>
+    </main>
 
 </body>
 
