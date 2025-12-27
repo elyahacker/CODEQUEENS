@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="YourrPharmacy">
     <meta name="keywords"
-        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,
-    onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
-    <title>Pharmacy</title>
+        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
+    <title>YourrPharmacy - Ana Səhifə</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         /* Müasir Şriftlərin İnteqrasiyası */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
         * {
             margin: 0;
@@ -22,6 +23,16 @@
             text-decoration: none !important;
         }
 
+        body {
+            background: #0f172a;
+            color: white;
+            overflow-x: hidden;
+            /* Arxa fon şəkli və gradient */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(sekil/sekil1.png) no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        /* HEADER & NAV */
         .luxury-header {
             width: 100%;
             padding: 15px 5%;
@@ -29,13 +40,8 @@
             top: 0;
             left: 0;
             z-index: 10000;
-            background: url(sekil/sekil1.png) center/cover;
-            height: 100vh;
-            background-color: rgb(0, 0, 0, 0.3);
-            background-blend-mode: darken;
         }
 
-        /* Naviqasiya Paneli */
         .nav-wrapper {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
@@ -55,7 +61,9 @@
         }
 
         .main-icon {
-            height: 40px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
 
         .brand-title {
@@ -103,7 +111,6 @@
             top: 150%;
             right: 0;
             width: 900px;
-            /* 3 Sütun üçün eni artırıldı */
             background: white;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
@@ -126,7 +133,6 @@
             position: relative;
         }
 
-        /* SIDEBAR */
         .mega-sidebar {
             width: 35%;
             background: #f9fbfb;
@@ -149,7 +155,7 @@
             padding: 14px 25px;
             font-size: 13px;
             font-weight: 700;
-            color: #a47474cc;
+            color: #444;
             transition: 0.2s;
             cursor: pointer;
         }
@@ -159,7 +165,6 @@
             background: white;
         }
 
-        /* SAĞ TƏRƏFİN SÜTUN SİSTEMİ */
         .mega-main-hover {
             display: none;
             position: absolute;
@@ -170,24 +175,21 @@
             padding: 30px;
             background: white;
             z-index: 10;
+            overflow-y: auto;
         }
 
         .cat-link:hover .mega-main-hover {
             display: block;
-            /* Sütunların işləməsi üçün block olmalıdır */
         }
 
-        /* SÜTUNLARIN AYARLANMASI */
         .grid-col {
-            column-count: 3;
-            /* Siyahını 3 sütuna bölür */
+            column-count: 2;
             column-gap: 20px;
             width: 100%;
         }
 
         .grid-col h3 {
             column-span: all;
-            /* Başlıq bütün sütunları əhatə edir */
             font-size: 11px;
             color: #bbb;
             text-transform: uppercase;
@@ -199,7 +201,6 @@
         .grid-col a {
             display: block;
             break-inside: avoid;
-            /* Linkin sütunlar arasında bölünməməsi üçün */
             color: #555;
             font-size: 13px;
             padding: 7px 0;
@@ -218,7 +219,6 @@
             background: white;
         }
 
-        /* BADGES (NİŞANLAR) MÖVQEYİ */
         .mega-badges {
             position: absolute;
             bottom: 0;
@@ -247,8 +247,235 @@
             color: #f39c12;
         }
 
-        body {
-            padding-top: 100px;
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: #ddd;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            padding: 15px 35px;
+            background: #27ae60;
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #2ecc71;
+            transform: scale(1.05);
+        }
+
+        .home-search {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .home-search input {
+            width: 100%;
+            padding: 20px 30px;
+            border-radius: 100px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .home-search i {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+        }
+
+        /* FEATURES SECTION */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 80px 8%;
+            background: #064e3b;
+            position: relative;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 40px 30px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #10b981;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER STYLES */
+        .luxury-footer {
+            background: #022c22;
+            padding: 80px 8% 40px;
+            color: white;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-about h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .footer-about h2 span {
+            color: #10b981;
+            font-weight: 800;
+        }
+
+        .footer-about p {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 30px;
+            height: 2px;
+            background: #10b981;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: #10b981;
+            padding-left: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #94a3b8;
+        }
+
+        .contact-info i {
+            color: #10b981;
+            font-size: 18px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #475569;
+            font-size: 14px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -258,7 +485,7 @@
     <header class="luxury-header">
         <div class="nav-wrapper">
             <div class="brand-box">
-                <img src="icon.png" alt="Logo" class="main-icon">
+                <img src="sekil/icon.png" alt="Logo" class="main-icon">
                 <h1 class="brand-title">Yourr<span>Pharmacy</span></h1>
             </div>
 
@@ -270,7 +497,6 @@
                     <div class="mega-panel">
                         <div class="mega-layout">
                             <aside class="mega-sidebar">
-
                                 <div class="cat-link">İnfeksion və parazitar
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
@@ -288,7 +514,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="cat-link">Onkoloji xəstəliklər
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
@@ -894,7 +1119,7 @@
                             </aside>
 
                             <div class="mega-main">
-                                <p style="color: #ccc; font-size: 13px;">Kateqoriya seçmək üçün siyahının üzərinə
+                                <p style="color: #666; font-size: 13px;">Kateqoriya seçmək üçün siyahının üzərinə
                                     gəlin...</p>
                                 <div class="mega-badges">
                                     <span class="badge b-green">● Ən çox baxılanlar</span>
@@ -907,11 +1132,84 @@
 
                 <a href="brendler.html" class="nav-item">Brendlər</a>
                 <a href="biizmle elaqe.html" class="nav-item">Bizimlə əlaqə</a>
-                <a href="sifaris qaydasi.html" class="nav-item">Sifariş Qaydası</a>
+                <a href="sifaris qaydasi.html" class="nav-item">Sifariş</a>
             </nav>
         </div>
     </header>
 
+    <section class="hero">
+        <h1>Sağlamlığınız Bizim <br> <span style="color: #27ae60;">Prioritetimizdir.</span></h1>
+        <p>YourrPharmacy ilə 10,000-dən çox tibbi məhsul, peşəkar məsləhət və sürətli çatdırılma bir toxunuş qədər
+            yaxındır.</p>
+        <div class="home-search">
+            <input type="text" placeholder="Axtarmaq istədiyiniz dərman və ya məhsulu yazın...">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="cta-buttons" style="margin-top: 30px;">
+            <a href="mehsullar.html" class="btn-primary">Kataloqu İncələ</a>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="feature-card">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Sürətli Çatdırılma</h3>
+            <p>Sifarişləriniz 60 dəqiqə ərzində, xüsusi qoruyucu qablarda qapınıza çatdırılır.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-stethoscope"></i>
+            <h3>Peşəkar Məsləhət</h3>
+            <p>Təcrübəli mütəxəssislərimiz sizə uyğun vasitələrin seçilməsində onlayn kömək edir.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-certificate"></i>
+            <h3>100% Sertifikatlı</h3>
+            <p>Satılan hər bir məhsul dövlət qeydiyyatından keçmiş və orijinaldır.</p>
+        </div>
+    </section>
+
+    <footer class="luxury-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h2>Yourr<span>Pharmacy</span></h2>
+                <p>Müasir aptek xidməti və sağlamlığınız üçün ən yaxşı həllər. Geniş məhsul çeşidi ilə hər zaman
+                    yanınızdayıq.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="mehsullar.html">Məhsullar</a></li>
+                    <li><a href="brendler.html">Brendlər</a></li>
+                    <li><a href="biizmle elaqe.html"> Bizimlə Əlaqə</a></li>
+                    <li><a href="sifaris qaydasi.html">Sifariş Qaydası</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Əlaqə Məlumatı</h4>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+994 50 123 45 67</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>yourrpharmacy@gmail.com</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bakı, Azərbaycan</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 YourrPharmacy. Bütün hüquqlar qorunur.
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

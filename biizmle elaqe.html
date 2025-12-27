@@ -6,22 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="YourrPharmacy">
     <meta name="keywords"
-        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy,
-    onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
-    <title>Pharmacy</title>
+        content="dərman,xəstəlik,aptek,pharmacy,sağlamlıq,YourrPharmacy, onlineaptek,derman,derman vasiteleri,ehtiyac,resept,hekim,doctor,xəstə,passient,tecili yardim,tecili tibbi yardim,çatdirilma">
+    <title>Pharmacy - Bizimlə Əlaqə</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         /* Müasir Şriftlərin İnteqrasiyası */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
             text-decoration: none !important;
         }
 
+        body {
+            /* Arxa fonu sənin istəyinə uyğun tənzimlədim */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sekil/sekil1.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* HEADER CSS */
         .luxury-header {
             width: 100%;
             padding: 15px 5%;
@@ -29,13 +40,8 @@
             top: 0;
             left: 0;
             z-index: 10000;
-            background: url(sekil/sekil1.png) center/cover;
-            height: 100vh;
-            background-color: rgb(0, 0, 0, 0.3);
-            background-blend-mode: darken;
         }
 
-        /* Naviqasiya Paneli */
         .nav-wrapper {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
@@ -55,7 +61,9 @@
         }
 
         .main-icon {
-            height: 40px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
 
         .brand-title {
@@ -93,7 +101,7 @@
             color: #f39c12;
         }
 
-        /* MEGA MENU PANEL */
+        /* MEGA MENU CSS (Sənin orijinal stilin) */
         .mega-dropdown {
             position: relative;
         }
@@ -103,7 +111,6 @@
             top: 150%;
             right: 0;
             width: 900px;
-            /* 3 Sütun üçün eni artırıldı */
             background: white;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
@@ -126,7 +133,6 @@
             position: relative;
         }
 
-        /* SIDEBAR */
         .mega-sidebar {
             width: 35%;
             background: #f9fbfb;
@@ -136,20 +142,11 @@
             border-right: 1px solid #eee;
         }
 
-        .mega-sidebar::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .mega-sidebar::-webkit-scrollbar-thumb {
-            background: #ddd;
-            border-radius: 10px;
-        }
-
         .cat-link {
             padding: 14px 25px;
             font-size: 13px;
             font-weight: 700;
-            color: #a47474cc;
+            color: #444;
             transition: 0.2s;
             cursor: pointer;
         }
@@ -159,7 +156,6 @@
             background: white;
         }
 
-        /* SAĞ TƏRƏFİN SÜTUN SİSTEMİ */
         .mega-main-hover {
             display: none;
             position: absolute;
@@ -170,24 +166,21 @@
             padding: 30px;
             background: white;
             z-index: 10;
+            overflow-y: auto;
         }
 
         .cat-link:hover .mega-main-hover {
             display: block;
-            /* Sütunların işləməsi üçün block olmalıdır */
         }
 
-        /* SÜTUNLARIN AYARLANMASI */
         .grid-col {
-            column-count: 3;
-            /* Siyahını 3 sütuna bölür */
+            column-count: 2;
             column-gap: 20px;
             width: 100%;
         }
 
         .grid-col h3 {
             column-span: all;
-            /* Başlıq bütün sütunları əhatə edir */
             font-size: 11px;
             color: #bbb;
             text-transform: uppercase;
@@ -199,7 +192,6 @@
         .grid-col a {
             display: block;
             break-inside: avoid;
-            /* Linkin sütunlar arasında bölünməməsi üçün */
             color: #555;
             font-size: 13px;
             padding: 7px 0;
@@ -218,7 +210,6 @@
             background: white;
         }
 
-        /* BADGES (NİŞANLAR) MÖVQEYİ */
         .mega-badges {
             position: absolute;
             bottom: 0;
@@ -247,8 +238,153 @@
             color: #f39c12;
         }
 
-        body {
-            padding-top: 100px;
+        /* CONTACT SECTION CSS (YENİ HİSSƏ) */
+        .contact-section {
+            padding: 140px 5% 60px;
+            /* Header-dən aşağı düşməsi üçün */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 60px;
+            border-radius: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: white;
+        }
+
+        .description {
+            color: #ccc;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .detail-item i {
+            width: 50px;
+            height: 50px;
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-right: 20px;
+            border: 1px solid rgba(39, 174, 96, 0.2);
+        }
+
+        .social-box {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-box i {
+            font-size: 1.3rem;
+            color: white;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .social-box i:hover {
+            background: #27ae60;
+            transform: translateY(-5px);
+        }
+
+        .glass-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        .input-field label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .input-field input,
+        .input-field textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            outline: none;
+        }
+
+        .input-field input:focus,
+        .input-field textarea:focus {
+            border-color: #27ae60;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .send-btn {
+            width: 100%;
+            padding: 18px;
+            background: #27ae60;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .send-btn:hover {
+            background: #219150;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .main-title {
+                font-size: 2.8rem;
+            }
+
+            .mega-panel {
+                width: 95vw;
+                right: -2.5vw;
+            }
         }
     </style>
 </head>
@@ -258,7 +394,7 @@
     <header class="luxury-header">
         <div class="nav-wrapper">
             <div class="brand-box">
-                <img src="icon.png" alt="Logo" class="main-icon">
+                <img src="sekil/icon.png" alt="Logo" class="main-icon">
                 <h1 class="brand-title">Yourr<span>Pharmacy</span></h1>
             </div>
 
@@ -270,7 +406,6 @@
                     <div class="mega-panel">
                         <div class="mega-layout">
                             <aside class="mega-sidebar">
-
                                 <div class="cat-link">İnfeksion və parazitar
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
@@ -292,13 +427,14 @@
                                 <div class="cat-link">Onkoloji xəstəliklər
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
-                                            <h3>Müalicə (Onkoloji)</h3>
+                                            <h3>Müalicə</h3>
                                             <a href="mehsullar.html">Şiş xəstəliklərində istifadə olunan vasitələr</a>
                                         </div>
                                     </div>
                                 </div>
+                                
 
-                                <div class="cat-link">Sinir sistemi xəstəliklər
+                                 <div class="cat-link">Sinir sistemi xəstəliklər
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
                                             <h3>Müalicə</h3>
@@ -891,6 +1027,11 @@
                                     </div>
                                 </div>
 
+
+
+
+
+
                             </aside>
 
                             <div class="mega-main">
@@ -911,6 +1052,69 @@
             </nav>
         </div>
     </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1 class="main-title">Bizimlə <br> Əlaqə</h1>
+                <p class="description">
+                    Sualınız var? Bizimlə əlaqə saxlamaqdan çəkinməyin. <br>
+                    Peşəkar komandamız 7/24 sizə kömək etməyə hazırdır.
+                </p>
+                <div class="info-details">
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p style="color: #27ae60; font-size: 0.8rem;">E-poçt</p>
+                            <p>info@yourrpharmacy.az</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <p style="color: #27ae60; font-size: 0.8rem;">Telefon</p>
+                            <p>+994 50 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p style="color: #27ae60; font-size: 0.8rem;">Ünvan</p>
+                            <p>Bakı şəhəri, Azərbaycan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-box">
+                    <a href="https://www.instagram.com/yourrpharmacy/"><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/1FZ22Wcjp9/"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="glass-form">
+                    <div class="input-field">
+                        <label>Tam Adınız</label>
+                        <input type="text" placeholder="Ad və Soyadınız" required>
+                    </div>
+                    <div class="input-field">
+                        <label>E-poçt Ünvanı</label>
+                        <input type="email" placeholder="nümunə@mail.com" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Mövzu</label>
+                        <input type="text" placeholder="Nə barədə yazırsınız?">
+                    </div>
+                    <div class="input-field">
+                        <label>Mesajınız</label>
+                        <textarea rows="4" placeholder="Sizə necə kömək edə bilərik?" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Müraciəti Göndər</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 </body>
 
