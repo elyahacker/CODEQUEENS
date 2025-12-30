@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Məhsul Bölməsi Ümumi */
+        .product-section {
+            padding: 50px 10%;
+            background-color: #f9f9f9;
+            /* Təmiz görünüş üçün açıq boz fon */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #dc1515c2;
+            transition: .4s;
+        }
+
+        .section-title:hover {
+            scale: 1.02;
+            /* box-shadow:0 0 15px rgba(158, 29, 29, 0.8),
+           0 0 20px rgba(12, 3, 3, 0.7),
+           0 0 25px rgb(246, 243, 243,0.6),
+           0 0 30px rgb(246, 243, 243,0.5),
+           0 0 35px rgb(246, 243, 243,0.4); */
+        }
+
+        /* Grid Sistemi */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            /* Avtomatik ölçüləndirmə */
+            gap: 163px;
+        }
+
+        /* Məhsul Kartı Dizaynı */
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            /* Hover effekti üçün */
+            width: 300px;
+            /* height: 600px; */
+            /* Əgər kartın həddindən artıq böyüməsini istəmirsinizsə bu sətiri əlavə edin */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            /* Siçanı gətirəndə kart yuxarı qalxır */
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin: 15px 0 5px;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: #27ae60;
+            /* Yaşıl rəng aptek üçün idealdır */
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Düymə Dizaynı */
+        .buy-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="product-section">
+        <h2 class="section-title">Protozoy infeksiyası əleyhinə vasitələr</h2>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt1.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Nitaspekt suspenziya 100 mq/ 5 ml 60 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">5.86AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Nitazoksanid</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt2.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Helvir suspenziya 100 mq/5 ml 60 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">5.86AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Nitazoksanid</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt3.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Nitaspekt 500 mq N20</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">12.00 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Nitazoksanid</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt4.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Kotrim 400 mq/80 mq N30</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">4.80 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Sulfametoksazol Trimetoprim</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt5.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Rozamet krem 1% 25 q</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">4.43 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt6.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Metronidazol Eskom 0.5% 100 ml N28</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">31.66 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt7.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Furasol 100 mq N5(toz)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">11.32 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Furagin</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt8.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Metronidazol 250 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">0.20 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt9.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Metronidazol 0.5% 100 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">1.13 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt10.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Sineral 500 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">9.73 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt11.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Ornidol 500 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">11.69 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt12.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Tiberal 500 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">14.54 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt13.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Ofran N20</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">20.17 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ofloksasin, Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt14.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Dornizol 500 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">9.32 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt15.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Nitazoksan suspenziya 2% 60 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">5.86 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Nitazoksanid</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt16.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Rektalin 1.5 q N10(rektal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">25.7 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Çaytikanı ekstraktı Alaqanqal ekstraktı Yovşan ekstraktı Dağ tərxunu ekstraktı Murdarça
+                        qabığının ekstraktı
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt17.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Klomeprol N12(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">27.29 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Xloramfenikol, Natamisin, Hidrokortizon asetat,
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt18.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Limenda N7(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">13.45 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Mikonazol,
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt19.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Ovumiks N6(vaginal şamlar) Ovumix</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">20.00 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Mikonazol nitrat, Neomisin sulfat, Polimiksin sulfat, Asiya sentellası,
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt20.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Metrogil 0.5% 100 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">1.62 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt21.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Neomezol N10(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">11.00 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Neomisin, Klotrimazol,
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt22.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Fayneks N6(vaginal şamlar) Faynex</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">20.17 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol, Mikonazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt23.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Exuro N7(vaginal tabletlər)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">14.64 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Mikonazol, Lidokain hidroxlorid,
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt24.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Flagimet N14(qranullar)Flagymet</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">28.4 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt25.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Metroqil Plus 30 q (vaginal gel)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">4.44 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category"></p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt26.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Soludazol 500 mq 100 ml N1</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">4.47 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt27.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>FemiNes N10(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">11.90 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol Nistatin Neomisin sulfat Hidrokortizon asetat
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt28.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Kolpoferin Forte N14(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">22.33 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol, Mikonazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt29.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Forttegin N6(vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">17.33 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol, Mikonazol nitrat, Neomisin sulfat ,Polimiksin B sulfat ,Asiya sentellası
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt30.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Vagimiks N6(vaginal şamlar)Vagimix</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">18.00 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">
+                        Metronidazol Mikonazol nitrat Neomisin sulfat Polimiksin sulfat Asiya sentellası
+                    </p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt31.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Guna-İL 7 damcı 30 ml</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">31.39 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">İnterleykin 7 4c</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt32.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Kolposin-T 100 ml N1(Colpocin-T)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">2.31 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt33.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Ornid 500 mq N10</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">9.60 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Ornidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt34.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Akumet 100 ml(Acumet)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">1.62 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Metronidazol</p>
+
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="pt35.png" alt="Dərman">
+                </div>
+                <div class="product-info">
+                    <h3>Ginovef-L N3 (vaginal şamlar)</h3>
+                    <p class="category">Reseptlə satılır</p>
+                    <span class="price">9.88 AZN</span>
+                    <button class="buy-btn">Səbətə at</button>
+                    <p class="category">Tinidazol, Tiokonazol, Lidokain</p>
+
+                </div>
+            </div>
+
+
+        </div>
+</div>

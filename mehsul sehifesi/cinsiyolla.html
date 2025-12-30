@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Məhsul Bölməsi Ümumi */
+        .product-section {
+            padding: 50px 10%;
+            background-color: #f9f9f9;
+            /* Təmiz görünüş üçün açıq boz fon */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #dc1515c2;
+            transition: .4s;
+        }
+        .section-title:hover{
+            scale: 1.02;
+              /* box-shadow:0 0 15px rgba(158, 29, 29, 0.8),
+           0 0 20px rgba(12, 3, 3, 0.7),
+           0 0 25px rgb(246, 243, 243,0.6),
+           0 0 30px rgb(246, 243, 243,0.5),
+           0 0 35px rgb(246, 243, 243,0.4); */
+        } 
+
+        /* Grid Sistemi */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            /* Avtomatik ölçüləndirmə */
+            gap: 163px;
+        }
+
+        /* Məhsul Kartı Dizaynı */
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            /* Hover effekti üçün */
+            width: 300px;
+            /* height: 600px; */
+            /* Əgər kartın həddindən artıq böyüməsini istəmirsinizsə bu sətiri əlavə edin */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            /* Siçanı gətirəndə kart yuxarı qalxır */
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin: 15px 0 5px;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: #27ae60;
+            /* Yaşıl rəng aptek üçün idealdır */
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Düymə Dizaynı */
+        .buy-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+ <body>
+        <section class="product-section">
+            <h2 class="section-title">Cinsi yolla keçən infeksiyaların müalicə və profilaktikası üçün vasitələr</h2>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx1.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Anaferon böyüklər üçün N20 (sorma tabletlər)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.91 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">İnsanın qamma  interferonuna antitel</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx2.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Zolavir krem 5 q</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">8.02 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Asiklovir</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx3.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bonasef 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.51 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx4.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Moksibet 400 mq N7</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">18.90 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Moksifloksasin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx5.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ukraferon 150 000 BV N10(rektal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">16.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">İnterferon alfa 2b</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx6.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ukraferon 1 000 000 BV N10(rektal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">28.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">İnterferon alfa 2b</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx7.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Faktakson 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.51 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson/p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx8.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sefobest 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.51 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx9.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sefobest 0.5 q N1(Cefobest)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price"> AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx10.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>ReLafin 200 mq/100mq N1(infuziya üçün məhlul)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">3.80 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx11.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ukraferon 500 000 BV N10 (rektal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">22.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">İnterferon alfa 2b</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx12.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lanomisin 500 mq 2 ml N1(Lanomycin)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.69 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Amikasin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx13.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sefamezin Dobfar 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">2.86 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Sefazolin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx14.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Asovir krem 50 mq/q 5 q</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">8.02 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Asiklovir</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx15.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Asovir 400 mq N30</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">19.76 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Asiklovir</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx16.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Metronidazol 500 mq 100 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">4.62 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Metronidazol</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx17.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vobenzim N200(Wobenzym)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">113.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Pnkreatin Tripsin Ximotripsin Bromelain Papain Amilaza Lipaza Rutozid trihidrat</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx18.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ofloksasin 2mq/ml 100 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">1.92 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Ofloksasin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx19.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Siprinol</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">2.94 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">letter-spacing</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx20.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sefazolin-AKOS 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">0.66 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Sefazolin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx21.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Eritromisin 200 mq N16</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">4.15 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Eritromisin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx22.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Novornid 250 mq N20</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">11.69 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Ornidazol</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx23.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Novornid forte 500 mq N10</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">111.69 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Ornidazol</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx24.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Trixopol 250 mq N20</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">3.89 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Metronidazol</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx25.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>klion-D N10(vaginal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">8.70 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Metronidazol, Mikonazol nitrat</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx26.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Metronidazol Eskom 0.5% 100 ml N28</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">31.66 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Metronidazol</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx27.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Asiklovir Denk 200 mq N25 (Acyclovir Denk)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">16.78 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Asiklovir</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cx28.png"alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Benzilpensillin Natrium BIH 1 mln BV N10 (Bezylpencillin Sodium BIH)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">2.60AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Benzilpensillin natrium</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>

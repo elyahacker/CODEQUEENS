@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Məhsul Bölməsi Ümumi */
+        .product-section {
+            padding: 50px 10%;
+            background-color: #f9f9f9;
+            /* Təmiz görünüş üçün açıq boz fon */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #dc1515c2;
+            transition: .4s;
+        }
+        .section-title:hover{
+            scale: 1.02;
+              /* box-shadow:0 0 15px rgba(158, 29, 29, 0.8),
+           0 0 20px rgba(12, 3, 3, 0.7),
+           0 0 25px rgb(246, 243, 243,0.6),
+           0 0 30px rgb(246, 243, 243,0.5),
+           0 0 35px rgb(246, 243, 243,0.4); */
+        } 
+
+        /* Grid Sistemi */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            /* Avtomatik ölçüləndirmə */
+            gap: 163px;
+        }
+
+        /* Məhsul Kartı Dizaynı */
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            /* Hover effekti üçün */
+            width: 300px;
+            /* height: 600px; */
+            /* Əgər kartın həddindən artıq böyüməsini istəmirsinizsə bu sətiri əlavə edin */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            /* Siçanı gətirəndə kart yuxarı qalxır */
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin: 15px 0 5px;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: #27ae60;
+            /* Yaşıl rəng aptek üçün idealdır */
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Düymə Dizaynı */
+        .buy-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+
+    <body>
+        <section class="product-section">
+            <h2 class="section-title">Bakterial xəstləliklər əleyhinə vasitələr</h2>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk3.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Amrizlole-N N10(vaginal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.28 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Metronidazol, Nistatin</p>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk1.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gaynomaks N7 (vaginal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">15.96 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Tinidazol, Tiokonazol</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk2.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Polikare N10 (vaginal şamlar) Policare
+                        </h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">8.96 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Neomisin sulfat Polimiksin B sulfat Nİstatin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk4.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Skin-Kap krem 50q(Skin-Cap)</h3>
+                        <span class="price">44 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Sink piritionat</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk5.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Viafloks 500 mq/500 mq N10(Viaflox)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">12.72 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin, Ornidazol</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk7.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pol-Sipro 200 mq/100 ml(Pol-Cipro)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">4.9 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk8.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pol-Sipro 400 mq/200 ml (Pol-Cipro)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.61 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk9.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kliavaq 100 ml N3(vaginal duş) Kliavag</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">30 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Su Qızılgül əsasında distillə suyu,
+                            Çonbanyastığı əsasında distillə suyu,
+                            Hamamelis əsasında distillə suyu
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk10.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Feminiti N6(vaginal şamlar)Feminity</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">17.33 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Metronidazol, Mikonazol nitrat, Neomisin sulfat, Polimiksin B sulfat, Asiya sentellası
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk11.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Selena 750 mq/200 mq N7(vaginal şamlar)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">13.45 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category"> Metronidazol, Mikonazol
+                        </p>
+
+
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk12.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Neo-Terhinan N10 (vaginal tabletlər)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">11.76 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Metronidazol Neomisin sulfat Nistatin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk6.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Enterofuril 200 mq N16 (Enterofuryl)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">6.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Nifuroksazid
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk13.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Moksiflam 400 mq 250 ml (infuziya üçün məhlul)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">34.40 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Moksifloksasin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk14.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Azoksin susoenziya 200 mq/5 ml 30 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">10.30 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Azitromisin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk15.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Resiprol 500 mq N14</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.20 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk16.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Klamisin 500 mq N14</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">13.04 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Klaritromisin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk17.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Via-Azitro 500 mq N3</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">6.55 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Azitromisin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk18.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Via-Azitro suspenziya 200 mq/5 ml 30 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">10.30 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Azitromisin
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk19.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Azrolid 500 mq N3</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">4.67 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Azitromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk20.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Revasid 0.75 mq N1 (Revacid)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">1.99 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Ampisillin Sulbaktam
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk21.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Revasid 1.5 mq N1 (Revacid)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">2.11 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Ampisillin Sulbaktam
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk22.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ambaksid 0.75 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">1.99 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Ampisillin Sulbaktam
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk23.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Auqmasillin suspenziya 457 mq/5 ml 60 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">6.60 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Amoksisillin Klavulon turşusu
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk24.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Polinoksid 2 mq/ml 300 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">38.96 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Linezolid
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk25.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Epigen intim-gel 250 ml</h3>
+                        <!-- <p class="category">Reseptlə satılır</p> -->
+                        <span class="price">44.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Qlisirrizin turşusu
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk26.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Epigen intim-gel 60 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">44.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Qlisirrizin turşusu</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk27.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Klotreks məlhəm 25 q</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.42 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Klotrimazol Gentamisin Kalendula ekstraktı Boymadərən ekstraktı
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk28.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vankopl 1000 mq N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">17.62 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Vankomisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk29.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Polifleks Polgil 0.5% 100 ml (Polifleks Polgyl)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">38.96 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Linezolid</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk30.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Levokeya 500 mq N7</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.16 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Levofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk31.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pol-Levo 500 mq 100 ml (infuziya üçün məhlul)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">16.22 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Levofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk32.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Azoksin suspenziya 200 mq/5 ml 15 ml</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">6.20 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Azitromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk33.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Azoksin 500 mq N3</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.40 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Azitromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk34.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3></h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">8.32 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Azitromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk35.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3></h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price"> AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category"></p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk36.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Qrammidin anastetiklə 112 doza (oral sprey)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">17.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Qramisidin C Oksibuprokain Setilpiridin xlorid
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk37.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Enterofuril suspenziya 200 mq/5 ml 90 ml (Enterofuryl)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">6.70 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Nifuroksazid</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk38.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Faktakson 500 mq N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">3.08 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk39.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Levaksela 500 mq N7</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">11.38 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Levofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk40.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Avidroks suspenziya 250 mq/ 5 ml 60 ml (Avidrox)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.26 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">
+                            Sefadroksil monohidrat
+                        </p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk41.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fromilid 500 mq N14</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">13.04 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Klaritromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk42.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kefzol 1 q N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.00 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Sefazolin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk43.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Makrolek 500 mq N3</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">4.25 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Azitromisin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk44.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>ladinoks 500 mq N10</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">3.38 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk45.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cipronatin 500 mq N14</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">7.20 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Siprofloksasin</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk46.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Seftriakson Panfarma 1 q N1 (Ceftriaxone Panpharma)</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.45 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftriakson</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk47.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Faktazidim 500 mq N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">5.90 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftazidim</p>
+
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bk48.png" alt="Dərman">
+                    </div>
+                    <div class="product-info">
+                        <h3>Faktazidim 1000 mq N1</h3>
+                        <p class="category">Reseptlə satılır</p>
+                        <span class="price">11.29 AZN</span>
+                        <button class="buy-btn">Səbətə at</button>
+                        <p class="category">Seftazidim</p>
+
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+    </body>
+
+    </html>
+</body>
+
+</html>
