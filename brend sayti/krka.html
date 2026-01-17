@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRKA</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        .krka{
+            height: 300px;
+            width: 320px;
+            margin: 15px;
+            margin-left: 38px;
+            display: inline-block;
+            cursor: pointer;
+            /* border: 1px solid rgb(245, 236, 236); */
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+            text-decoration: none;
+
+        }
+         .krka:hover{
+            scale: 1.05;
+
+        }
+        .krka:hover::before{
+            opacity:0.8;
+        }
+        .krka::before{
+            padding: 15px;
+            line-height:32px;
+            content:attr(data);
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            color: rgb(40, 39, 39);
+            opacity: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items:flex-end;
+            padding-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 1s;
+        }
+        .sekil1{
+           background: url(kr1.png)center/cover;   
+        }
+        .sekil2{
+           background: url(kr2.png)center/cover;   
+        }
+        .sekil3{
+           background: url(kr3.png)center/cover;   
+        }
+        .sekil4{
+           background: url(kr4.png)center/cover;   
+        }
+        .sekil5{
+           background: url(kr5.png)center/cover;   
+        }
+        .sekil6{
+           background: url(kr6.png)center/contain;   
+        }
+        .sekil7{
+           background: url(kr7.png)center/cover;   
+        }
+        .sekil8{
+           background: url(kr8.png)center/cover;   
+        }
+        .sekil9{
+           background: url(kr9.png)center/cover;   
+        }
+        .sekil10{
+           background: url(kr10.png)center/contain no-repeat;   
+        }
+        .sekil11{
+           background: url(kr11.png)center/cover;   
+        }
+        .sekil12{
+            background: url(kr12.png)center/cover;
+        }
+    </style>
+</head>
+<body>
+    <a href="krka.html" class="krka sekil1" data="Roksera 40 mq N28 Tərkibi: Rosuvastatin Farmakoloji Təsiri:Hipolipidemik Vahidi: TAB İstehsalcı Ölkə: SLOVENIYA İstehsalcı Firma:KRKA Təsiredicinin miqdarı:Rosuvastatin  40 mq [Roksera qiymet catdirilma / qiyməti çatdırılma Baku/aptek onlayn online]"></a>
+     <div class="krka sekil2" data="Pikovit Forte 7+ N30(sorma pastillər) Tərkibi:Vitamin A Vitamin D3 Vtamin C Vitamin E Vitamin B1 Vitamin B2 Vitamin B6 Fol turşusu Vitamin B12 Farmakoloji Təsiri:Polivitamin Vahidi: PAST İstehsalcı Ölkə: Sloveniya İstehsalcı Firma:KRKA[Pikovit qiymet catdirilma/qiyməti çatdırılma"></div>
+     <div class="krka sekil3" data="Siprinol 250 mq N10 Tərkibi: Siprofloksasin Farmakoloji Təsiri:Аntibiotik Vahidi: TAB İstehsalcı Ölkə: SLOVENIYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Siprofloksasin  250 mq [  Siprinol qiymet catdirilma / qiyməti çatdırılma Baku /  aptek onlayn online  ]"></div>
+     <div class="krka sekil4" data="Zilt 75 mq N28 Зилт 75 мг N28 Tərkibi: Klopidoqrel Farmakoloji Təsiri:Antiaqreqant Vahidi:TAB İstehsalcı Ölkə: XORVATİYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Klopidoqrel 75 mq[Zilt qiymet catdirilma/qiyməti çatdırılma Baku/aptek onlayn online  ]
+"></div>
+     <div class="krka sekil5" data="Zilt 75 mq N28 Зилт 75 мг N28 Tərkibi: Klopidoqrel Farmakoloji Təsiri: Antiaqreqant Vahidi: TAB İstehsalcı Ölkə: XORVATİYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Klopidoqrel  75 mq [ Zilt qiymet catdirilma / qiyməti çatdırılma Baku /  aptek onlayn online]Zilt 75 mq N28 quantity"></div>
+     <div class="krka sekil6" data="Amprilan HD 5 mq / 25 mq N30 Амприлан HД 5 мг / 25 мг N30 Tərkibi: Ramipril Hidroxlortiazid Farmakoloji Təsiri: Hipotenziv, antiaritmik Vahidi: TAB İstehsalcı Ölkə:  SLOVENIYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Ramipril 5 mq  Hidroxlortiazid 25 mq"></div>
+     <div class="krka sekil7" data="Roksera 20 mq N28  Tərkibi: Rosuvastatin Farmakoloji Təsiri: Hipolipidemik Vahidi: TAB İstehsalcı Ölkə: SLOVENIYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Rosuvastatin  20 mq [  Roksera qiymet catdirilma / qiyməti çatdırılma Baku"></div>
+     <div class="krka sekil8" data="Siprinol 500 mq N10 Tərkibi: Siprofloksasin Farmakoloji Təsiri: Аntibiotik Vahidi: TAB İstehsalcı Ölkə: SLOVENIYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı: Siprofloksasin  500mq [  Siprinol qiymet catdirilma / qiyməti çatdırılma Baku /  aptek onlayn online]"></div>
+     <div class="krka sekil9" data="Roksera 10 mq N28   Tərkibi: Rosuvastatin Farmakoloji Təsiri:Hipolipidemik Vahidi: TAB İstehsalcı Ölkə: SLOVENIYA İstehsalcı Firma: KRKA Təsiredicinin miqdarı:  Rosuvastatin  10 mq [  Roksera qiymet catdirilma / qiyməti çatdırılma Baku /  aptek onlayn online]"></div>
+     <div class="krka sekil10" data="Tərkibi: Bitki ekstraktları (növündən asılı olaraq: yadımcıotu, ilkin çiçək, ağcaqayın və s.)
+Farmakoloji təsiri: Öskürək qovucu, iltihab əleyhinə
+İstifadəsi: Quru və yaxma öskürək, yuxarı tənəffüs yollarının xəstəliklərində tətbiq olunurVahidi:Şirəİstehsalçı ölkə:Sloveniya.İstehsalçı firma: KRKA"></div>
+     <div class="krka sekil11" data="İstehsalçı: KRKA, Sloveniya.Tərkibi: Pantoprazol.Təyinatı: Mədə turşuluğunu azaldır; xora, qıcqırma (reflüks) və qastrit müalicəsi üçün istifadə olunur.Forması: Venadaxili inyeksiya üçün toz.Qeyd:Yalnız həkim məsləhəti ilə istifadə edilməlidir."></div>
+     <div class="krka sekil12" data="Nalgesin (275 mq) – güclü ağrıkəsici və iltihabəleyhinə dərmandır.İstifadəsi: Baş, diş, əzələ və menstruasiya ağrıları üçün.Tərkibi: Naproksen natrium.Qəbulu: Gündə 1-2 tablet, yeməkdən sonra bol su ilə.Xəbərdarlıq: Mədə yarası olanlara məsləhət görülmür.Dərmanın dozası ilə bağlı həkimlə məsləhətləşməyiniz vacibdir."></div>
+    
+</body>
+</html>
