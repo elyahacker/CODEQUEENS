@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daxil ol</title>
+    <link rel="shortcut icon" href="sekil/icon.png" type="img/x-icon" style="border-radius: 50%">
+    <title>Document</title>
     <style>
-
-
-        /* Müasir Şriftlərin İnteqrasiyası */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
         * {
             margin: 0;
@@ -20,15 +18,18 @@
         }
 
         body {
-            background-size: 100%;
+            background-image: url(sekil/sekil1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: rgb(0, 0, 0, 0.6);
             min-height: 100vh;
-            color: white;
-            overflow-x: hidden;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(sekil/sekil1.png) no-repeat center center/cover;
-            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-/* 
-        /* HEADER & NAV */
+
         .luxury-header {
             width: 100%;
             padding: 15px 5%;
@@ -46,7 +47,7 @@
             align-items: center;
             padding: 10px 35px;
             border-radius: 100px;
-            /* border: 1px solid rgba(255, 255, 255, 0.15); */
+            border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
@@ -97,7 +98,6 @@
             color: #f39c12;
         }
 
-        /* MEGA MENU PANEL */
         .mega-dropdown {
             position: relative;
         }
@@ -113,14 +113,18 @@
             overflow: hidden;
             visibility: hidden;
             opacity: 0;
-            transform: translateY(20px);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+
+
+
         }
 
         .mega-dropdown:hover .mega-panel {
             visibility: visible;
             opacity: 1;
             transform: translateY(0);
+
         }
 
         .mega-layout {
@@ -241,140 +245,102 @@
 
         .b-orange {
             color: #f39c12;
-        } */
-
-
-        .giris:hover:hover {
-            scale: 1.04;
-            filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.26));
-
         }
 
         .giris {
-            transition: .4s;
+            transition: 0.5s;
             cursor: pointer;
-
-            border: 1px solid white;
-            width: 630px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            width: 600px;
             height: 500px;
             border-radius: 30px;
-            position: absolute;
-            left: 400px;
-            top: 150px;
-            padding: 29px;
+            margin-top: 150px;
             backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 0;
         }
 
-        .login-container {
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: inset 0 0 20px rgb(140, 140, 145);
-            width: 100px;
-            text-align: center;
-
+        .giris:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
         }
 
         .login-box h2 {
             color: rgb(255, 255, 255);
             margin-bottom: 30px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 50px;
+            font-size: 45px;
             text-align: center;
         }
 
         .input-group {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
         .input-group input {
-            width: 80%;
-            padding: 10px 40px 10px 15px;
+            width: 85%;
+            padding: 12px 20px;
             border: none;
             border-radius: 25px;
-            background: rgba(71, 45, 45, 0.742);
-            /* box-shadow: inset 0 0 10px rgba(12, 39, 57, 0.862); */
-            filter: drop-shadow(1px);
+            background: rgba(71, 45, 45, 0.427);
             color: white;
-            margin-left: 30px;
-        }
-
-        .input-group .icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
+            outline: none;
         }
 
         .options {
             display: flex;
-            justify-content: space-between;
-            font-size: 12px;
+            justify-content: space-around;
+            font-size: 14px;
             color: white;
-            margin-bottom: 20px;
-            margin-left: 40px;
-            margin-top: 10px;
-        }
-
-        .options a {
-            color: #ddd;
-            text-decoration: none;
+            margin-bottom: 26px;
+            margin-right: 330px;
+            margin-top: 30px;
 
         }
 
         button {
-            width: 80%;
-            padding: 10px;
+            width: 85%;
+            padding: 12px;
             background: rgb(255, 249, 249);
             border: none;
+            font-size: 14px;
             border-radius: 25px;
             cursor: pointer;
             font-weight: bold;
-            margin-left: 60px;
+            display: block;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            color: black;
         }
 
         .register-link {
             color: white;
-            font-size: 13px;
-            margin-top: 20px;
-            margin-left: 130px;
+            font-size: 15px;
+            margin-top: 25px;
+            text-align: center;
         }
 
         .register-link a {
             color: #fff;
             font-weight: bold;
             text-decoration: underline;
-            margin-left: 60px;
-        }
-
-        a {
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            padding-top: 100px;
-            margin-left: 100px;
-
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 60px;
-            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 10px;
         }
     </style>
 </head>
 
 <body>
-
-
-
-
     <header class="luxury-header">
         <div class="nav-wrapper">
             <div class="brand-box">
                 <img src="sekil/icon.png" alt="Logo" class="main-icon">
                 <h1 class="brand-title">Yourr<span>Pharmacy</span></h1>
             </div>
-
             <nav class="nav-links-row">
                 <a href="index.html" class="nav-item">Ana Səhifə</a>
 
@@ -404,6 +370,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="cat-link">Onkoloji xəstəliklər
                                     <div class="mega-main-hover">
                                         <div class="grid-col">
@@ -1007,10 +974,8 @@
                                 </div>
 
                             </aside>
-
                             <div class="mega-main">
-                                <p style="color: #666; font-size: 13px;">Kateqoriya seçmək üçün siyahının üzərinə
-                                    gəlin...</p>
+                                <p style="color: #ccc; font-size: 13px;">Kateqoriya seçin...</p>
                                 <div class="mega-badges">
                                     <span class="badge b-green">● Ən çox baxılanlar</span>
                                     <span class="badge b-orange">● Ən çox satılanlar</span>
@@ -1022,10 +987,11 @@
 
                 <a href="brendler.html" class="nav-item">Brendlər</a>
                 <a href="biizmle elaqe.html" class="nav-item">Bizimlə əlaqə</a>
-                <a href="sifaris qaydasi.html" class="nav-item">Sifariş</a>
+                <a href="qeydiyyat.html" class="nav-item">Daxil Ol</a>
             </nav>
         </div>
     </header>
+
 
     <div class="giris">
         <div class="login-center">
@@ -1049,13 +1015,14 @@
                     </div>
                     <button type="submit">Daxil ol</button>
                     <p class="register-link">Hesabınız yoxdur?
-                        <a href="qeydiyyat.html">Qeydiyyat</a>
+                        <a href="yenisehife.html">Qeydiyyat</a>
                     </p>
                 </form>
             </div>
         </div>
 
     </div>
+
 
 </body>
 
