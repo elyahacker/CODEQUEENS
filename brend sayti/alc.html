@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALCON</title>
+    <style>
+        html,body{
+            background:#dfdfdf;
+            height: 100%;
+            width: 100%;        
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header-wrapper{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 60px;
+          background-color:#27AE60;
+          backdrop-filter: calc(blur);
+          /* border-bottom: 1px solid #f0f0f0; */
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          
+        }
+        .box{
+            height:auto;
+            width:auto;
+            /* background:linear-gradient(135deg,#5b5fc7,#2b548f); */
+            font-size: 24px;
+            color:white;
+            letter-spacing: 2px;
+            text-align:left;
+            font-weight:700;
+            text-transform: none;
+            display: flex;
+            gap: 30px;
+            justify-content:space-between;
+
+        }
+        .menyu{
+          display: flex;
+          gap: 25px;
+          font-size: 20px;
+          color: #7f8c8d;
+        }
+     
+        h1{
+            font-size: 100px;
+            text-align: center;
+            color: rgb(144, 144, 205);
+            transition: .4s;
+            cursor: pointer;
+            filter: drop-shadow(0 0 100px rgb(7, 7, 113));
+        }
+        h1:hover{
+            /* filter: drop-shadow(0 0 10px blue); */
+            text-shadow: 2px 2px 6px blue;
+            /* scale: 1.2; */
+            transition: 1s;
+            
+        }
+        .alcon{
+           height: 300px;
+           width:320px ;
+           margin:15px;
+           margin-left:38px;
+           border-radius: 30px;
+           display: inline-block;
+           cursor: pointer;
+           border: 1px solid rgb(231, 228, 228);
+           position: relative;
+           /* text-decoration: none; */
+           /* vertical-align: top; */
+           overflow: hidden;
+           transition: .4s;
+        }
+        .alcon:hover{
+          scale: 1.05;
+        }
+        .alcon:hover::before{
+            opacity: 0.8; 
+            
+        }
+ 
+         .alcon::before{
+            padding: 15px;
+            line-height: 1.4;;
+            
+            /* width: 100%;
+            height: 100%; */
+            content:attr(data-info) ;
+            position: absolute;
+            background-color: rgb(237, 231, 231);
+            color: rgb(8, 8, 8);
+            /* border-radius: 10px; */
+            /* padding: 5px 10px; */
+            opacity:0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 15px;
+            display: flex;
+            justify-content:center;
+            text-align: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 1s;
+            
+         }
+      
+          .sekil1{
+            background: url(high.png)center/contain;
+          }
+          .sekil2{
+            background: url(tatata.png)center/cover;
+          }
+          .sekil3{
+            background: url(maxit.png)center/cover;
+          }
+          .sekil4{
+            background: url(5555.png)center/cover;
+          }
+          .sekil5{
+            background: url(opti.png)center/contain;
+          }
+          .sekil6{
+            background: url(sim.png)center/contain;
+          }
+          .sekil7{ 
+            background: url(paz.png)center/cover;
+          }
+          .sekil8{
+            background:url(ptptp.png)center/cover;
+          }
+          .sekil9{
+            background: url(restt.png)center/cover;
+          }
+          .sekil10{
+            background: url(nevan.png)center/contain;
+          }
+          .sekil11{
+            background: url(patanol.png)center/cover;
+            
+          }
+          .sekil12{
+            background: url(tears.png)center/cover;
+          }
+          .sekil13{
+            background: url(azopt.png)center/cover;
+          }
+          .sekil14{
+            background: url(hyhyhy.png)center/cover;
+          }
+          .sekil15{
+             background: url(cyclom.png)center/cover;
+          }
+          .sekil16{
+            background: url(plus.png)center/cover;
+          }
+
+         span{
+          background: url(serachicon2.png)center/contain;
+          width: 43px;
+          height: 43px;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: .4s;
+          margin-left: 3px;
+
+          /* position: fixed; */
+          
+         } 
+         span:hover{
+          scale: 1.2;
+         }
+        .cart{
+          cursor: pointer;
+          background: url(cart.png)center/cover;
+          height: 40px;
+          width: 40px;
+          transition: .4s;
+          margin-right: 2px;
+        }
+        .cart:hover{
+          scale: 1.2;
+         }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header-wrapper">
+    <div class="box">ALCON</div>
+    <div class="menyu">
+       <span></span>
+       <span class="cart"></span>
+    </div>
+    </div>
+    <a href="alcon.html" class="alcon sekil1" data-info="Sistein Ultra 10 ml (göz damcısı) Цистейн Ультра 10 мл (глазные капли) Systane Ultra Tərkibi:Polietilenqlikol Propilenglikol Hidroksipropil Natrium, xlorid Kalium xlorid Sorbitol Aminometilpropanol Bor, turşusu Farmakoloji Təsiri:Oftalmoprotektor Vahidi: FLAKON İstehsalcı Ölkə: İSPANİYA İstehsalcı Firma: ALCON [ Sistein qiymet catdirilma / qiyməti çatdırılma Baku">
+    </a>
+    <div class="alcon sekil2" data-info="Travatan 2.5 ml (göz damcısı) Траватан 2.5 мл (глазные капли)Tərkibi/Состав:Travoprost (Травопрост) 40 mkq/mlFarmakoloji Təsiri Фармакологическое действие: Antiqlaukoma preparatı (Противоглаукомный препарат)
+İstehsalçı Ölkə/Страна производитель: Belçika/Бельгия (və ya ABŞ/США)
+Firma: ALCON"></div>
+    <div class="alcon sekil3" data-info="Maxitrol 3.5q (göz məlhəmi) Макситрол 3.5г (глазная мазь)
+Tərkibi/Состав: Deksametazon, Neomisin sulfat, Polimiksin B sulfat (Дексаметазон, Неомицина сульфат,Полимиксина B сульфат)
+Farmakoloji Təsiri/Фармакологическое действие: İltihabəleyhinə və antibakterial preparat (Противовоспалительный и антибактериальный препарат)
+İstehsalçı Ölkə/Страна производитель:Belçika/Бельгия (və ya ABŞ/США)Firma:ALCON"></div>
+    <div class="alcon sekil4" data-info="Tərkibi:Moksifloksasin 0,5% (Моксифлоксацин) — güclü antibiotikdir.Təyinatı:Bakterial mənşəli göz infeksiyalarının müalicəsi üçün steril göz damcısıdır (капли глазные стерильно).Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Novartis (Alcon ailəsinə məxsusdur).Təsiri: Bakteriyaların DNT sintezini pozaraq onların inkişafını dayandırır." ></div>
+    <div class="alcon sekil5" data-info="Tərkibi: HydraGlyde nəmləndirici matrisi (увлажняющая матрица) və dezinfeksiyaedici maddələr — linzalar üçün çoxfunksiyalı məhluldur.Təyinatı: Yumşaq kontakt linzaların təmizlənməsi, dezinfeksiyası (дезинфекция) və saxlanması üçün istifadə olunur.Həcmi: Müxtəlif ölçülü flakonlarda (məsələn: 60 ml, 300 ml) təqdim olunur."></div>
+    <div class="alcon sekil6" data-info="Tərkibi: Brinzolamid 10 mq/ml və Brimonidin tartrat 2 mq/ml (Бринзоламид + Бримонидин) — kombinə olunmuş göz damcısıdır.Təyinatı: Qlaukoma və yüksək göz daxili təzyiqin(глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda(стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin yaranmasını azaldır və axınını yaxşılaşdıraraq təzyiqi effektiv şəkildə aşağı salır."></div>
+    <div class="alcon sekil7" data-info="Tərkibi: Olopatadin 0,7% (Олопатадин) — yüksək konsentrasiyalı allergiya əleyhinə vasitədir.
+Təyinatı: Allergiya ilə əlaqəli göz qaşınmasının (зуд в глазах) müalicəsi və qarşısının alınması üçün nəzərdə tutulub.Həcmi: 2,5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin reseptorlarını bloklayaraq 24 saat ərzində gözlərdəki qaşınma, qızartı və şişkinliyi (аллергические реакции) aradan qaldırır."></div>
+    <div class="alcon sekil8" data-info="Tərkibi: Amitriptilin (Амитриптилин) — tritsiklik antidepressantlar qrupuna aid olan dərmandır.Təyinatı: Müxtəlif növ depressiyaların, həyəcan pozuntularının (тревожные состояния) və xroniki ağrıların müalicəsində istifadə olunur.Həcmi: Adətən 10 mq və ya 25 mq-lıq tablet (таблетки) formasında təqdim olunur.İstehsalçı: Müxtəlif əczaçılıq şirkətləri tərəfindən istehsal edilir (məsələn, müxtəlif ölkələrin generik brendləri)."></div>
+    <div class="alcon sekil9" data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (система липидов) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (синдром сухого глаза) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.
+Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq (длительное облегчение) təmin edir."></div>
+    <div class="alcon sekil10" data-info="Tərkibi: Nepafenak 0,1% (Непафенак) — qeyri-steroid iltihab əleyhinə (НПВС) göz damcısıdır.
+Təyinatı: Katarakta əməliyyatı ilə bağlı yaranan ağrı və iltihabın (воспаление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda (стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz toxumalarına sürətlə nüfuz edərək ağrını kəsir, şişkinliyi azaldır və əməliyyatdan sonrakı fəsadların qarşısını alır.
+"></div>
+    <div class="alcon sekil11" data-info="Tərkibi: Olopatadin 0,1% (Олопатадин) — allergiya əleyhinə effektiv göz damcısıdır.
+Təyinatı: Allergik konyuktivitlə bağlı göz qaşınması, sulanma və qızartının (аллергические реакции) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin ifrazını bloklayaraq allergiyanın simptomlarını sürətlə aradan qaldırır."></div>
+    <div class="alcon sekil12" data-info="Tərkibi Hipromelloza 3 mq və Dekstran 1 mq maddələrinin kombinasiyasından ibarətdir.Təyinatı Gözdəki quruluq və yanma hissini aradan qaldırmaq üçün süni göz yaşı damcısıdır
+Həcmi 15 ml flakonda təqdim olunurİstehsalçı Alcon şirkəti
+Təsiri Gözün təbii nəmini bərpa edərək uzunmüddətli rahatlıq təmin edir"></div>
+    <div class="alcon sekil13" data-info="Tərkibi: Brinzolamid 1% (Бринзоламид) — karbon anhidraz inhibitorları qrupuna aid olan göz damcısıdır.Təyinatı: Açıqbucaqlı qlaukoma və yüksək göz daxili təzyiqin (глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda (стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin istehsalını azaldaraq təzyiqi aşağı salır və görmə sinirinin zədələnmə riskini azaldır."></div>
+    <div class="alcon sekil14" data-info=" Tərkibində nəmləndirməni artıran Hyaluronat (Hyaluron turşusu) mövcuddur.Xüsusiyyəti: Qoruyucu maddəsizdir (Preservative Free).Təyinatı: Gözlərin uzunmüddətli rahatlamasını və qabaqcıl nəmləndirilməsini (Advanced Hydration) təmin edir.Uyğunluq: Kontakt linzalarla istifadə üçün təhlükəsizdir.Qablaşdırma: Hər biri 0.7 ml olmaqla 30 ədəd birdəfəlik konteynerdən ibarətdir.İstehsalçı: Alcon."></div>
+    <div class="alcon sekil15" data-info="Tərkibi:Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir,nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir."></div>
+    <div class="alcon sekil16" data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir."></div>
+
+    
+</body>
+</html>

@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALCON</title>
     <style>
-        html,body{
-            background:#dfdfdf;
+        html,
+        body {
             height: 100%;
-            width: 100%;        
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100%;
         }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .header-wrapper{
+
+        /* .header-wrapper{
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 8px 60px;
           background-color:#27AE60;
           backdrop-filter: calc(blur);
-          /* border-bottom: 1px solid #f0f0f0; */
           position: sticky;
           top: 0;
           z-index: 1000;
           
-        }
-        .box{
-            height:auto;
-            width:auto;
+        } */
+        .box {
+            height: auto;
+            width: auto;
             /* background:linear-gradient(135deg,#5b5fc7,#2b548f); */
             font-size: 24px;
-            color:white;
+            color: white;
             letter-spacing: 2px;
-            text-align:left;
-            font-weight:700;
+            text-align: left;
+            font-weight: 700;
             text-transform: none;
             display: flex;
             gap: 30px;
-            justify-content:space-between;
+            justify-content: space-between;
 
         }
-        .menyu{
-          display: flex;
-          gap: 25px;
-          font-size: 20px;
-          color: #7f8c8d;
+
+        .menyu {
+            display: flex;
+            gap: 25px;
+            font-size: 20px;
+            color: #7f8c8d;
         }
-     
-        h1{
+
+        h1 {
             font-size: 100px;
             text-align: center;
             color: rgb(144, 144, 205);
@@ -58,154 +55,1043 @@
             cursor: pointer;
             filter: drop-shadow(0 0 100px rgb(7, 7, 113));
         }
-        h1:hover{
+
+        h1:hover {
             /* filter: drop-shadow(0 0 10px blue); */
             text-shadow: 2px 2px 6px blue;
             /* scale: 1.2; */
             transition: 1s;
-            
+
         }
-        .alcon{
-           height: 300px;
-           width:320px ;
-           margin:15px;
-           margin-left:38px;
-           border-radius: 30px;
-           display: inline-block;
-           cursor: pointer;
-           border: 1px solid rgb(231, 228, 228);
-           position: relative;
-           /* text-decoration: none; */
-           /* vertical-align: top; */
-           overflow: hidden;
-           transition: .4s;
+
+        .alcon {
+            height: 300px;
+            width: 320px;
+            margin: 15px;
+            margin-top: 20px;
+            margin-left: 38px;
+            border-radius: 30px;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid rgb(231, 228, 228);
+            position: relative;
+            /* text-decoration: none; */
+            /* vertical-align: top; */
+            overflow: hidden;
+            transition: .4s;
         }
-        .alcon:hover{
-          scale: 1.05;
+
+        .alcon:hover {
+            scale: 1.05;
         }
-        .alcon:hover::before{
-            opacity: 0.8; 
-            
+
+        .alcon:hover::before {
+            opacity: 0.8;
+
         }
- 
-         .alcon::before{
+
+        .alcon::before {
             padding: 15px;
-            line-height: 1.4;;
-            
+            line-height: 1.4;
+            ;
+
             /* width: 100%;
             height: 100%; */
-            content:attr(data-info) ;
+            content: attr(data-info);
             position: absolute;
             background-color: rgb(237, 231, 231);
             color: rgb(8, 8, 8);
             /* border-radius: 10px; */
             /* padding: 5px 10px; */
-            opacity:0;
+            opacity: 0;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             font-size: 15px;
             display: flex;
-            justify-content:center;
+            justify-content: center;
             text-align: center;
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             transition: 1s;
-            
-         }
-      
-          .sekil1{
-            background: url(high.png)center/contain;
-          }
-          .sekil2{
-            background: url(tatata.png)center/cover;
-          }
-          .sekil3{
-            background: url(maxit.png)center/cover;
-          }
-          .sekil4{
-            background: url(5555.png)center/cover;
-          }
-          .sekil5{
-            background: url(opti.png)center/contain;
-          }
-          .sekil6{
-            background: url(sim.png)center/contain;
-          }
-          .sekil7{ 
-            background: url(paz.png)center/cover;
-          }
-          .sekil8{
-            background:url(ptptp.png)center/cover;
-          }
-          .sekil9{
-            background: url(restt.png)center/cover;
-          }
-          .sekil10{
-            background: url(nevan.png)center/contain;
-          }
-          .sekil11{
-            background: url(patanol.png)center/cover;
-            
-          }
-          .sekil12{
-            background: url(tears.png)center/cover;
-          }
-          .sekil13{
-            background: url(azopt.png)center/cover;
-          }
-          .sekil14{
-            background: url(hyhyhy.png)center/cover;
-          }
-          .sekil15{
-             background: url(cyclom.png)center/cover;
-          }
-          .sekil16{
-            background: url(plus.png)center/cover;
-          }
 
-         span{
-          background: url(serachicon2.png)center/contain;
-          width: 43px;
-          height: 43px;
-          border-radius: 30px;
-          cursor: pointer;
-          transition: .4s;
-          margin-left: 3px;
-
-          /* position: fixed; */
-          
-         } 
-         span:hover{
-          scale: 1.2;
-         }
-        .cart{
-          cursor: pointer;
-          background: url(cart.png)center/cover;
-          height: 40px;
-          width: 40px;
-          transition: .4s;
-          margin-right: 2px;
         }
-        .cart:hover{
-          scale: 1.2;
-         }
+
+        .sekil1 {
+            background: url(high.png)center/contain;
+        }
+
+        .sekil2 {
+            background: url(tatata.png)center/cover;
+        }
+
+        .sekil3 {
+            background: url(maxit.png)center/cover;
+        }
+
+        .sekil4 {
+            background: url(5555.png)center/cover;
+        }
+
+        .sekil5 {
+            background: url(opti.png)center/contain;
+        }
+
+        .sekil6 {
+            background: url(sim.png)center/contain;
+        }
+
+        .sekil7 {
+            background: url(paz.png)center/cover;
+        }
+
+        .sekil8 {
+            background: url(ptptp.png)center/cover;
+        }
+
+        .sekil9 {
+            background: url(restt.png)center/cover;
+        }
+
+        .sekil10 {
+            background: url(nevan.png)center/contain;
+        }
+
+        .sekil11 {
+            background: url(patanol.png)center/cover;
+
+        }
+
+        .sekil12 {
+            background: url(tears.png)center/cover;
+        }
+
+        .sekil13 {
+            background: url(azopt.png)center/cover;
+        }
+
+        .sekil14 {
+            background: url(hyhyhy.png)center/cover;
+        }
+
+        .sekil15 {
+            background: url(cyclom.png)center/cover;
+        }
+
+        .sekil16 {
+            background: url(plus.png)center/cover;
+        }
 
 
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            text-decoration: none !important;
+        }
 
+        body {
+            background: #0f172a;
+            color: white;
+            overflow-x: hidden;
+            height: 800px;
+          background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(arxafon.png) no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        .luxury-header {
+            width: 100%;
+            padding: 15px 5%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+        }
+
+        .nav-wrapper {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 35px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-icon {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .brand-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-title span {
+            font-weight: 800;
+            color: #27ae60;
+        }
+
+        .nav-links-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item,
+        .mega-trigger {
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover,
+        .mega-trigger:hover {
+            color: #f39c12;
+        }
+
+        .mega-dropdown {
+            position: relative;
+        }
+
+        .mega-panel {
+            position: absolute;
+            top: 150%;
+            right: 0;
+            width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .mega-dropdown:hover .mega-panel {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mega-layout {
+            display: flex;
+            height: 500px;
+            position: relative;
+        }
+
+        .mega-sidebar {
+            width: 35%;
+            background: #f9fbfb;
+            padding: 10px 0;
+            overflow-y: auto;
+            max-height: 500px;
+            border-right: 1px solid #eee;
+        }
+
+        .mega-sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .mega-sidebar::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        .cat-link {
+            padding: 14px 25px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #444;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .cat-link:hover {
+            color: #f39c12;
+            background: white;
+        }
+
+        .mega-main-hover {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65%;
+            height: 100%;
+            padding: 30px;
+            background: white;
+            z-index: 10;
+            overflow-y: auto;
+        }
+
+        .cat-link:hover .mega-main-hover {
+            display: block;
+        }
+
+        .grid-col {
+            column-count: 2;
+            column-gap: 20px;
+            width: 100%;
+        }
+
+        .grid-col h3 {
+            column-span: all;
+            font-size: 11px;
+            color: #bbb;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        .grid-col a {
+            display: block;
+            break-inside: avoid;
+            color: #555;
+            font-size: 13px;
+            padding: 7px 0;
+            transition: 0.2s;
+            line-height: 1.3;
+        }
+
+        .grid-col a:hover {
+            color: #27ae60;
+            transform: translateX(5px);
+        }
+
+        .mega-main {
+            width: 65%;
+            padding: 30px;
+            background: white;
+        }
+
+        .mega-badges {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px;
+            display: flex;
+            gap: 20px;
+            background: white;
+            border-top: 1px solid #f5f5f5;
+            z-index: 20;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        .b-green {
+            color: #27ae60;
+        }
+
+        .b-orange {
+            color: #f39c12;
+        }
     </style>
 </head>
+
 <body>
-    <div class="header-wrapper">
+    <!-- <div class="header-wrapper">
     <div class="box">ALCON</div>
     <div class="menyu">
        <span></span>
        <span class="cart"></span>
     </div>
-    </div>
-    <a href="alcon.html" class="alcon sekil1" data-info="Sistein Ultra 10 ml (göz damcısı) Цистейн Ультра 10 мл (глазные капли) Systane Ultra Tərkibi:Polietilenqlikol Propilenglikol Hidroksipropil Natrium, xlorid Kalium xlorid Sorbitol Aminometilpropanol Bor, turşusu Farmakoloji Təsiri:Oftalmoprotektor Vahidi: FLAKON İstehsalcı Ölkə: İSPANİYA İstehsalcı Firma: ALCON [ Sistein qiymet catdirilma / qiyməti çatdırılma Baku">
+    </div> -->
+
+
+    <header class="luxury-header">
+        <div class="nav-wrapper">
+            <div class="brand-box">
+                <img src="icskl.png" alt="Logo" class="main-icon">
+                <h1 class="brand-title">Yourr<span>Pharmacy</span></h1>
+            </div>
+
+            <nav class="nav-links-row">
+                <a href="index.html" class="nav-item">Ana Səhifə</a>
+
+                <div class="mega-dropdown">
+                    <span class="mega-trigger">Məhsullar ▾</span>
+                    <div class="mega-panel">
+                        <div class="mega-layout">
+                            <aside class="mega-sidebar">
+                                <div class="cat-link">İnfeksion və parazitar
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsul sehifesi/bakterialxestelik.html">Bakterial əleyhinə
+                                                vasitələr</a>
+                                            <a href="mehsul sehifesi/protozoyeleyhine.html">Protozoy infeksiyası
+                                                əleyhinə vasitələr </a>
+                                            <a href="mehsul sehifesi/cinsiyolla.html">Cinsi yolla keçən infeksiyaların
+                                                müalicə və
+                                                profilaktikası üçün vasitələr</a>
+                                            <a href="mehsul sehifesi/qoturluqsayti.html">Qoturluq və pedikulyoz zamanı
+                                                istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qurd xəstəliklərində istifadə olunan (antihelmit)
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Göbələk əleyhinə vasitələr</a>
+                                            <a href="mehsullar.html">Virus infeksiyası əleyhinə vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cat-link">Onkoloji xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə (Onkoloji)</h3>
+                                            <a href="mehsullar.html">Şiş xəstəliklərində istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Sinir sistemi xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Sinir oyanıqlığında istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Nikotin asılılığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Xroniki yorğunluq sindromu və asteniya zamanı
+                                                istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Nevralgiyalarda istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Yuxu pozğunluğu zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Depressiya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Neyrosirkulyator distoniya (NSD)</a>
+                                            <a href="mehsullar.html">Epilepsiyada istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Şizofreniya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Parkinson xəstəliyində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Alkohol asılılığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Həzm sistemi xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Ezofagit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Mədə və 12 barmaq bağırsaq xorasında istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qastrit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Köp əleyhinə vasitələr</a>
+                                            <a href="mehsullar.html">Disbakterioz zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Digər həzm pozğunluqları zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qaraciyər xəstəliklərinin müalicə və
+                                                profilaktikasında istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Öd xəstəliklərinin müalicə və profilaktikasında
+                                                istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Ferment çatışmamazlığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">İshalda istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qəbizlik zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Babasil (hemorroy) zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Mədəaltı vəzin xəstəliklərinin müalicə və
+                                                profilaktikasında istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Antibiotiklə birgə istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Kolit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Ürəkbulanma və qusma zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Ağız boşluğu xəstəlikləri zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qıcıqlanmış bağırsaq sindromu zamanı istifadə
+                                                olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Sidik-cinsiyyət sistemi
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Sidik-cinsiyyət sistemi xəstəliklərinin
+                                                profilaktikası zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Böyrək və sidik yollarının iltihabında istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Böyrək daşı xəstəliyində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Sidik ifrazatı xəstəliklərində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Prostat vəzin adenomasında istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Prostatit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Kişi sonsuzluğunda istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Mastopatiya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Potensiya zəifliyi zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Klimaks və menopauzada istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Menstruasiya pozğunluqları zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Böyrək çatmamazlığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qadın çanaq orqanlarının iltihabı xəstəliklərində
+                                                istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qadın sonsuzluğunda istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Hamiləlik
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Doğuş fəaliyyətinin pozğunluğu</a>
+                                            <a href="mehsullar.html">Dölün hipoksiyası zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Hamiləlikdən qorunma vasitələri
+                                                (kontraseptivlər)</a>
+                                            <a href="mehsullar.html">Uşaqlığın hipertonusu zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Hamiləliyi və ovulyasiya vaxtini təyin etmək üçün
+                                                testlər</a>
+                                            <a href="mehsullar.html">Hamiləlik toksikozu zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Cərrahiyyə
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Həlledicilər</a>
+                                            <a href="mehsullar.html">Köməkçi maddələr</a>
+                                            <a href="mehsullar.html">Anestetiklər</a>
+                                            <a href="mehsullar.html">Narkoz üçün vasitələr</a>
+                                            <a href="mehsullar.html">Cərrahi vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Tənəffüs sistemi
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Mövsümi virus infeksiyalarına qarşı mübarizə</a>
+                                            <a href="mehsullar.html">Öskürək əleyhinə vasitələr</a>
+                                            <a href="mehsullar.html">Allergik boğulmalar və bronxial astmada istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qrip zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Rinit, sinusit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Bronxit, pnevmoniya zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Angina, faringit, laringit zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Yuxarı tənəffüs yollarının digər xəstəliklərində
+                                                istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Aşağı tənəffüs yollarının digər xəstəliklərində
+                                                istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Ağrikəsicilər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Travmatik ağrılarda istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Oynaq və əzələ ağrılarında istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Spazmolitiklər</a>
+                                            <a href="mehsullar.html">Menstrual ağrılar zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Baş, diş və qulaq ağrılarında istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Daxili orqanlarda ağrılar zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Gigiyenik bezlər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Qadınlar üçün bezlər</a>
+                                            <a href="mehsullar.html">Böyüklər üçün bezlər</a>
+                                            <a href="mehsullar.html">Yataq xəstələrinə istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Digər gigiyenik vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Sümük-əzələ sistemi
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Osteoporoz zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Raxit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Artrit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Artroz zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Podaqra əleyhinə vasitələr</a>
+                                            <a href="mehsullar.html">Yumşaq toxumaların zədələnmələri</a>
+                                            <a href="mehsullar.html">Dayaq-hərəkət sisteminin fəaliyyətini
+                                                yaxşılaşdırıcı vasitələr</a>
+                                            <a href="mehsullar.html">Kalsium defisitli xəstəliklər</a>
+                                            <a href="mehsullar.html">Sınıqlar</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Qulaq xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Qulaq xəstəliklərinin müalicə və profilaktikasında
+                                                istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cat-link">Travmalar,zəhərlənmələr və digər xarici təsirlər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Kəllə-beyin və digər travmalar</a>
+                                            <a href="mehsullar.html">Allergik reaksiya zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Zəhərlənmələr zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Köçürülmüş orqan və toxumaların rədd edilməsi</a>
+                                            <a href="mehsullar.html">Anafilaktik şok zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Ana və uşaq
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Ana və uşaq vasitələri</a>
+                                            <a href="mehsullar.html">Uşaq qidaları</a>
+                                            <a href="mehsullar.html">Uşaqlar üçün ağız boşluğuna qulluq</a>
+                                            <a href="mehsullar.html">Uşaq bezləri</a>
+                                            <a href="mehsullar.html">Uşaq dərisinə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Uşaq oyuncaqları</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Ortopediya vasitələr
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Aşağı ətraflar üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Hamilələr üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Yuxarı ətraflar üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Çanaq nahiyəsi üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Qadınlar üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Döş qəfəsi nahiyəsi üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Boyun nahiyəsi üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Boyun nahiyəsi üçün ortopedik vasitələr</a>
+                                            <a href="mehsullar.html">Qaməti korreksiyaedici bandajlar</a>
+                                            <a href="mehsullar.html">Digər ortopedik vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Optika məhsulları
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Optik çərçivələr</a>
+                                            <a href="mehsullar.html">Uşaqlar üçün optik çərçivələr</a>
+                                            <a href="mehsullar.html">Qadınlar üçün günəş eynəkləri</a>
+                                            <a href="mehsullar.html">Kişilər üçün günəş eynəkləri</a>
+                                            <a href="mehsullar.html">Uşaqlar üçün günəş eynəkləri</a>
+                                            <a href="mehsullar.html">Qarışıq günəş eynəkləri</a>
+                                            <a href="mehsullar.html">Optik kontakt linzalar</a>
+                                            <a href="mehsullar.html">Kosmetik kontakt linzalar</a>
+                                            <a href="mehsullar.html">Xizək eynəkləri</a>
+                                            <a href="mehsullar.html">Linza məhlulu</a>
+                                            <a href="mehsullar.html">Digər optiki vasitələr</a>
+                                            <a href="mehsullar.html">Optik şüşə</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Dəri xəstəlikləri
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Dırnaq xəstləlikləri zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Göbələk mənşəli səpkilərdə istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Psoriaz zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Saç xəstəlikləri zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Yanıq zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Dermatit və ekzema zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Dəri infeksiyaları zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Dəmrov zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Dəmrov zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Döyənək əleyhinə vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Tibbi avadanlıqlar
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Tonometrlər, stetoskoplar</a>
+                                            <a href="mehsullar.html">Termometrlər</a>
+                                            <a href="mehsullar.html">Masaj aparatları</a>
+                                            <a href="mehsullar.html">Qlükometrlər</a>
+                                            <a href="mehsullar.html">İnhalyatorlar</a>
+                                            <a href="mehsullar.html">Tərəzilər</a>
+                                            <a href="mehsullar.html">Pulsoksimetrlər</a>
+                                            <a href="mehsullar.html">Eşitmə cihazları</a>
+                                            <a href="mehsullar.html">Hava təmizləyici cihazlar</a>
+                                            <a href="mehsullar.html">Digər cihazlar</a>
+                                            <a href="mehsullar.html">İsidici vasitələr</a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Tibbi geyimlər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Tibbi maskalar və respiratorlar</a>
+                                            <a href="mehsullar.html">Tibbi kişi xalatları</a>
+                                            <a href="mehsullar.html">Tibbi qadın xalatları</a>
+                                            <a href="mehsullar.html">Tibbi kostyumlar</a>
+                                            <a href="mehsullar.html">Tibbi ayaqqabılar, baxillər</a>
+                                            <a href="mehsullar.html">Tibbi papaqlar</a>
+                                            <a href="mehsullar.html">Tibbi əlcəklər</a>
+                                            <a href="mehsullar.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Endokrinoloji xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Yumurtalıqların polikistozu sindromunda istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qalxanabənzər vəzi (zob) xəstəliklərinin müalicə və
+                                                profilaktikasında istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Diabet xəstəliklərinin müalicə və profilaktikasında
+                                                istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Digər hormonal xəstəliklərin müalicə və
+                                                profilaktikasında istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cat-link">Qan dövranı sisteminin xəstləlikləri
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Stenokardiya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Ürəyin digər xəstəliklərində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Beyin qan dövranı pozğunluğunda istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Venaların varikoz genişlənməsi zamanı istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Tromboflebit zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Aritmiya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Ürək revmatizmi zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qan dövranının digər xəstəliklərində istifadə
+                                                olunan vasitələr</a>
+                                            <a href="mehsullar.html">Hipertoniya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Qanaxmalarda istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Miokard infarktı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Hipotoniya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Ürək çatmamazlığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Ateroskleroz zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">İnsult zamanı istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Antiseptiklər və dezinfeksiyaedicilər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Əl, dəri və selikli qişalar üçün antiseptik
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Tibbi avadanlıqlar üçün</a>
+                                            <a href="mehsullar.html">Dezinfeksiyaedici vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Göz xəstəliklər
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Quru göz sindromu zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Görmə zəifliyi zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Kataraktada istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Gözün virus mənşəli xəstəliklərində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Gözün diaqnostikası zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Gözün allergik xəstəliklərində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Gözün iltihabi xəstəliklərində istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Qlaukomada istifadə olunan vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Maddələr mübadiləsinin pozğunluğu
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Qidalanma pozğunluğu zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Vitamin və mineral çatmamazlığı</a>
+                                            <a href="mehsullar.html">Piylənmədə istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">Metabolik pozulmalar zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Homeopatiya
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Homeopatik vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">İntim vasitələr
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Uşaqlıq yoluna daraldıcı təsir göstərən
+                                                vasitələr</a>
+                                            <a href="mehsullar.html">Ginekoloji vasitələr</a>
+                                            <a href="mehsullar.html">Qoruyucu məmulatlar</a>
+                                            <a href="mehsullar.html">İntim gellər</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Qan xəstəlikləri və immun sisteminin çatışmazlığları
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Anemiya zamanı istifadə olunan vasitələr</a>
+                                            <a href="mehsullar.html">İmmunçatışmazlığı zamanı istifadə olunan
+                                                vasitələr</a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                            <a href="mehsullar.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Dəriyə qulluq vasitələri
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Əllərə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Ayaqlara qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Bədənə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Tər əleyhinə vasitələr</a>
+                                            <a href="mehsullar.html">Epilyasiya və depilyasiya</a>
+                                            <a href="mehsullar.html">Zərdablar</a>
+                                            <a href="mehsullar.html">Üzə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Yaşlanma əleyhinə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Duş gelləri</a>
+                                            <a href="mehsullar.html">Sabunlar</a>
+                                            <a href="mehsullar.html">Təmizləyici vasitələr</a>
+                                            <a href="mehsullar.html">Nəmləndirici vasitələr</a>
+                                            <a href="mehsullar.html">Günəş vannası üçün kremlər</a>
+                                            <a href="mehsullar.html">Kişilər üçün təraş vasitələri</a>
+                                            <a href="mehsullar.html">Gözətrafı dəriyə qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Tonal vasitələr</a>
+                                            <a href="mehsullar.html">Dodaqlara qulluq vasitələri</a>
+                                            <a href="mehsullar.html">Çapıqlar üçün vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Ağız boşluğunun qulluğu
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Saqqızlar</a>
+                                            <a href="mehsullar.html">Diş sapları</a>
+                                            <a href="mehsullar.html">Diş fırçaları</a>
+                                            <a href="mehsullar.html">Diş məcunları</a>
+                                            <a href="mehsullar.html">Diş tozları</a>
+                                            <a href="mehsullar.html">Ağız boşluğu üçün məhlullar</a>
+                                            <a href="mehsullar.html">Ağız boşluğu üçün gellər</a>
+                                            <a href="mehsullar.html">Ağız boşluğu üçün digər vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Kosmetik vasitələr
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">La Roche-Posay</a>
+                                            <a href="mehsullar.html">Vichy</a>
+                                            <a href="mehsullar.html">Biolane</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Dieta
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Artıq bədən çəkisi zamanı istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Tibbi vasitələr
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Zondlar, kateterlər</a>
+                                            <a href="mehsullar.html">Yuyucu vasitələr</a>
+                                            <a href="mehsullar.html">Sarğı materialları</a>
+                                            <a href="mehsullar.html">İnfuziya sistemləri, şprislər, iynələr</a>
+                                            <a href="mehsullar.html">Test üçün vasitələr</a>
+                                            <a href="mehsullar.html">Digər vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Kosmetoloji və dəriyə qulluq vasitələri
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Kosmetoloji alətlər</a>
+                                            <a href="mehsullar.html">Qidalandırıcı kremlər</a>
+                                            <a href="mehsullar.html">Yumşaldıcı vasitələr</a>
+                                            <a href="mehsullar.html">Digər kosmetik vasitələr</a>
+                                            <a href="mehsullar.html">Günəşdən qoruyucu vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">İdman
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">İdmançılar üçün digər vasitələr</a>
+                                            <a href="mehsullar.html">İdmançılar üçün qidalar</a>
+                                            <a href="mehsullar.html">İdman zədələnmələrində istifadə olunan
+                                                vasitələr</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cat-link">Təbii vasitələr
+                                    <div class="mega-main-hover">
+                                        <div class="grid-col">
+                                            <h3>Müalicə</h3>
+                                            <a href="mehsullar.html">Mineral sular, meyvə şirələri</a>
+                                            <a href="mehsullar.html">Mineral sular, meyvə şirələri</a>
+                                            <a href="mehsullar.html">Qəhvələr</a>
+                                            <a href="mehsullar.html">Bitki çayları</a>
+                                            <a href="mehsullar.html">Dərman bitkiləri</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </aside>
+
+                            <div class="mega-main">
+                                <p style="color: #666; font-size: 13px;">Kateqoriya seçmək üçün siyahının üzərinə
+                                    gəlin...</p>
+                                <div class="mega-badges">
+                                    <span class="badge b-green">● Ən çox baxılanlar</span>
+                                    <span class="badge b-orange">● Ən çox satılanlar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="brendler.html" class="nav-item">Brendlər</a>
+                <a href="biizmle elaqe.html" class="nav-item">Bizimlə əlaqə</a>
+                <a href="qeydiyyat.html" class="nav-item">Daxil Ol</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <a href="alcon.html" class="alcon sekil1"
+        data-info="Sistein Ultra 10 ml (göz damcısı) Цистейн Ультра 10 мл (глазные капли) Systane Ultra Tərkibi:Polietilenqlikol Propilenglikol Hidroksipropil Natrium, xlorid Kalium xlorid Sorbitol Aminometilpropanol Bor, turşusu Farmakoloji Təsiri:Oftalmoprotektor Vahidi: FLAKON İstehsalcı Ölkə: İSPANİYA İstehsalcı Firma: ALCON [ Sistein qiymet catdirilma / qiyməti çatdırılma Baku">
     </a>
     <div class="alcon sekil2" data-info="Travatan 2.5 ml (göz damcısı) Траватан 2.5 мл (глазные капли)Tərkibi/Состав:Travoprost (Травопрост) 40 mkq/mlFarmakoloji Təsiri Фармакологическое действие: Antiqlaukoma preparatı (Противоглаукомный препарат)
 İstehsalçı Ölkə/Страна производитель: Belçika/Бельгия (və ya ABŞ/США)
@@ -214,27 +1100,50 @@ Firma: ALCON"></div>
 Tərkibi/Состав: Deksametazon, Neomisin sulfat, Polimiksin B sulfat (Дексаметазон, Неомицина сульфат,Полимиксина B сульфат)
 Farmakoloji Təsiri/Фармакологическое действие: İltihabəleyhinə və antibakterial preparat (Противовоспалительный и антибактериальный препарат)
 İstehsalçı Ölkə/Страна производитель:Belçika/Бельгия (və ya ABŞ/США)Firma:ALCON"></div>
-    <div class="alcon sekil4" data-info="Tərkibi:Moksifloksasin 0,5% (Моксифлоксацин) — güclü antibiotikdir.Təyinatı:Bakterial mənşəli göz infeksiyalarının müalicəsi üçün steril göz damcısıdır (капли глазные стерильно).Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Novartis (Alcon ailəsinə məxsusdur).Təsiri: Bakteriyaların DNT sintezini pozaraq onların inkişafını dayandırır." ></div>
-    <div class="alcon sekil5" data-info="Tərkibi: HydraGlyde nəmləndirici matrisi (увлажняющая матрица) və dezinfeksiyaedici maddələr — linzalar üçün çoxfunksiyalı məhluldur.Təyinatı: Yumşaq kontakt linzaların təmizlənməsi, dezinfeksiyası (дезинфекция) və saxlanması üçün istifadə olunur.Həcmi: Müxtəlif ölçülü flakonlarda (məsələn: 60 ml, 300 ml) təqdim olunur."></div>
-    <div class="alcon sekil6" data-info="Tərkibi: Brinzolamid 10 mq/ml və Brimonidin tartrat 2 mq/ml (Бринзоламид + Бримонидин) — kombinə olunmuş göz damcısıdır.Təyinatı: Qlaukoma və yüksək göz daxili təzyiqin(глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda(стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin yaranmasını azaldır və axınını yaxşılaşdıraraq təzyiqi effektiv şəkildə aşağı salır."></div>
-    <div class="alcon sekil7" data-info="Tərkibi: Olopatadin 0,7% (Олопатадин) — yüksək konsentrasiyalı allergiya əleyhinə vasitədir.
-Təyinatı: Allergiya ilə əlaqəli göz qaşınmasının (зуд в глазах) müalicəsi və qarşısının alınması üçün nəzərdə tutulub.Həcmi: 2,5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin reseptorlarını bloklayaraq 24 saat ərzində gözlərdəki qaşınma, qızartı və şişkinliyi (аллергические реакции) aradan qaldırır."></div>
-    <div class="alcon sekil8" data-info="Tərkibi: Amitriptilin (Амитриптилин) — tritsiklik antidepressantlar qrupuna aid olan dərmandır.Təyinatı: Müxtəlif növ depressiyaların, həyəcan pozuntularının (тревожные состояния) və xroniki ağrıların müalicəsində istifadə olunur.Həcmi: Adətən 10 mq və ya 25 mq-lıq tablet (таблетки) formasında təqdim olunur.İstehsalçı: Müxtəlif əczaçılıq şirkətləri tərəfindən istehsal edilir (məsələn, müxtəlif ölkələrin generik brendləri)."></div>
-    <div class="alcon sekil9" data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (система липидов) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (синдром сухого глаза) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.
-Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq (длительное облегчение) təmin edir."></div>
+    <div class="alcon sekil4"
+        data-info="Tərkibi:Moksifloksasin 0,5% (Моксифлоксацин) — güclü antibiotikdir.Təyinatı:Bakterial mənşəli göz infeksiyalarının müalicəsi üçün steril göz damcısıdır (капли глазные стерильно).Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Novartis (Alcon ailəsinə məxsusdur).Təsiri: Bakteriyaların DNT sintezini pozaraq onların inkişafını dayandırır.">
+    </div>
+    <div class="alcon sekil5"
+        data-info="Tərkibi: HydraGlyde nəmləndirici matrisi (увлажняющая матрица) və dezinfeksiyaedici maddələr — linzalar üçün çoxfunksiyalı məhluldur.Təyinatı: Yumşaq kontakt linzaların təmizlənməsi, dezinfeksiyası (дезинфекция) və saxlanması üçün istifadə olunur.Həcmi: Müxtəlif ölçülü flakonlarda (məsələn: 60 ml, 300 ml) təqdim olunur.">
+    </div>
+    <div class="alcon sekil6"
+        data-info="Tərkibi: Brinzolamid 10 mq/ml və Brimonidin tartrat 2 mq/ml (Бринзоламид + Бримонидин) — kombinə olunmuş göz damcısıdır.Təyinatı: Qlaukoma və yüksək göz daxili təzyiqin(глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda(стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin yaranmasını azaldır və axınını yaxşılaşdıraraq təzyiqi effektiv şəkildə aşağı salır.">
+    </div>
+    <div class="alcon sekil7"
+        data-info="Tərkibi: Olopatadin 0,7% (Олопатадин) — yüksək konsentrasiyalı allergiya əleyhinə vasitədir.
+Təyinatı: Allergiya ilə əlaqəli göz qaşınmasının (зуд в глазах) müalicəsi və qarşısının alınması üçün nəzərdə tutulub.Həcmi: 2,5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin reseptorlarını bloklayaraq 24 saat ərzində gözlərdəki qaşınma, qızartı və şişkinliyi (аллергические реакции) aradan qaldırır.">
+    </div>
+    <div class="alcon sekil8"
+        data-info="Tərkibi: Amitriptilin (Амитриптилин) — tritsiklik antidepressantlar qrupuna aid olan dərmandır.Təyinatı: Müxtəlif növ depressiyaların, həyəcan pozuntularının (тревожные состояния) və xroniki ağrıların müalicəsində istifadə olunur.Həcmi: Adətən 10 mq və ya 25 mq-lıq tablet (таблетки) formasında təqdim olunur.İstehsalçı: Müxtəlif əczaçılıq şirkətləri tərəfindən istehsal edilir (məsələn, müxtəlif ölkələrin generik brendləri).">
+    </div>
+    <div class="alcon sekil9"
+        data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (система липидов) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (синдром сухого глаза) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.
+Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq (длительное облегчение) təmin edir.">
+    </div>
     <div class="alcon sekil10" data-info="Tərkibi: Nepafenak 0,1% (Непафенак) — qeyri-steroid iltihab əleyhinə (НПВС) göz damcısıdır.
 Təyinatı: Katarakta əməliyyatı ilə bağlı yaranan ağrı və iltihabın (воспаление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda (стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz toxumalarına sürətlə nüfuz edərək ağrını kəsir, şişkinliyi azaldır və əməliyyatdan sonrakı fəsadların qarşısını alır.
 "></div>
-    <div class="alcon sekil11" data-info="Tərkibi: Olopatadin 0,1% (Олопатадин) — allergiya əleyhinə effektiv göz damcısıdır.
-Təyinatı: Allergik konyuktivitlə bağlı göz qaşınması, sulanma və qızartının (аллергические реакции) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin ifrazını bloklayaraq allergiyanın simptomlarını sürətlə aradan qaldırır."></div>
+    <div class="alcon sekil11"
+        data-info="Tərkibi: Olopatadin 0,1% (Олопатадин) — allergiya əleyhinə effektiv göz damcısıdır.
+Təyinatı: Allergik konyuktivitlə bağlı göz qaşınması, sulanma və qızartının (аллергические реакции) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Histamin ifrazını bloklayaraq allergiyanın simptomlarını sürətlə aradan qaldırır.">
+    </div>
     <div class="alcon sekil12" data-info="Tərkibi Hipromelloza 3 mq və Dekstran 1 mq maddələrinin kombinasiyasından ibarətdir.Təyinatı Gözdəki quruluq və yanma hissini aradan qaldırmaq üçün süni göz yaşı damcısıdır
 Həcmi 15 ml flakonda təqdim olunurİstehsalçı Alcon şirkəti
 Təsiri Gözün təbii nəmini bərpa edərək uzunmüddətli rahatlıq təmin edir"></div>
-    <div class="alcon sekil13" data-info="Tərkibi: Brinzolamid 1% (Бринзоламид) — karbon anhidraz inhibitorları qrupuna aid olan göz damcısıdır.Təyinatı: Açıqbucaqlı qlaukoma və yüksək göz daxili təzyiqin (глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda (стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin istehsalını azaldaraq təzyiqi aşağı salır və görmə sinirinin zədələnmə riskini azaldır."></div>
-    <div class="alcon sekil14" data-info=" Tərkibində nəmləndirməni artıran Hyaluronat (Hyaluron turşusu) mövcuddur.Xüsusiyyəti: Qoruyucu maddəsizdir (Preservative Free).Təyinatı: Gözlərin uzunmüddətli rahatlamasını və qabaqcıl nəmləndirilməsini (Advanced Hydration) təmin edir.Uyğunluq: Kontakt linzalarla istifadə üçün təhlükəsizdir.Qablaşdırma: Hər biri 0.7 ml olmaqla 30 ədəd birdəfəlik konteynerdən ibarətdir.İstehsalçı: Alcon."></div>
-    <div class="alcon sekil15" data-info="Tərkibi:Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir,nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir."></div>
-    <div class="alcon sekil16" data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir."></div>
+    <div class="alcon sekil13"
+        data-info="Tərkibi: Brinzolamid 1% (Бринзоламид) — karbon anhidraz inhibitorları qrupuna aid olan göz damcısıdır.Təyinatı: Açıqbucaqlı qlaukoma və yüksək göz daxili təzyiqin (глазное давление) müalicəsi üçün istifadə olunur.Həcmi: 5 ml flakonda (стерильная суспензия) təqdim olunur.İstehsalçı: Alcon.Təsiri: Göz daxili mayenin istehsalını azaldaraq təzyiqi aşağı salır və görmə sinirinin zədələnmə riskini azaldır.">
+    </div>
+    <div class="alcon sekil14"
+        data-info=" Tərkibində nəmləndirməni artıran Hyaluronat (Hyaluron turşusu) mövcuddur.Xüsusiyyəti: Qoruyucu maddəsizdir (Preservative Free).Təyinatı: Gözlərin uzunmüddətli rahatlamasını və qabaqcıl nəmləndirilməsini (Advanced Hydration) təmin edir.Uyğunluq: Kontakt linzalarla istifadə üçün təhlükəsizdir.Qablaşdırma: Hər biri 0.7 ml olmaqla 30 ədəd birdəfəlik konteynerdən ibarətdir.İstehsalçı: Alcon.">
+    </div>
+    <div class="alcon sekil15"
+        data-info="Tərkibi:Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir,nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir.">
+    </div>
+    <div class="alcon sekil16"
+        data-info="Tərkibi: Propilen qlikol 0,6% və LipiTech sistemi (lipid sistemi) — göz yaşının yağ təbəqəsini bərpa edən damcıdır.Təyinatı: Göz quruluğu (quru göz sindromu) və buxarlanma nəticəsində yaranan qıcıqlanmanı aradan qaldırmaq üçündür.Həcmi: 10 ml flakonda təqdim olunur.İstehsalçı: Alcon.Təsiri: Gözün təbii yaş təbəqəsini sabitləşdirir, nəmin buxarlanmasının qarşısını alır və uzunmüddətli rahatlıq təmin edir.">
+    </div>
 
-    
+
 </body>
+
 </html>
